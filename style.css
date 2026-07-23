@@ -1579,7 +1579,7 @@ a:focus-visible, button:focus-visible, input:focus-visible{
   position: absolute;
   right: 8%;
   bottom: 4%;
-  width: 120px ;
+  width: 40px ;
   transform: rotate(310deg);
   animation: bannerShape7Float 5s ease-in-out infinite;
   
