@@ -1,0 +1,319 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Contact Us | Little Learners Kindergarten & Preschool</title>
+<meta name="description" content="Get in touch with Little Learners Kindergarten. Questions about admissions, programs, or visiting our campus - our friendly team is here to help every step of the way.">
+<meta property="og:title" content="Contact Us | Little Learners Kindergarten">
+<meta property="og:description" content="We'd love to hear from you! Questions about admissions, programs, or visiting our kindergarten? Our friendly team is here to help.">
+<meta property="og:type" content="website">
+
+<!-- Preconnect Fonts -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@500;600;700;800&family=Nunito:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+<!-- Remix Icons & Styles -->
+<link href="https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+<script type="module" src="reticle-dev.js"></script>
+</head>
+<body>
+
+<!-- Loader -->
+<div class="loader-overlay" id="loaderOverlay">
+  <div class="loader-container md">
+    <div class="loader-spinner">
+      <div class="loader-ring"></div>
+      <div class="loader-ring"></div>
+      <div class="loader-ring"></div>
+      <div class="loader-ring"></div>
+    </div>
+  </div>
+</div>
+
+<!-- Custom Cursor -->
+<div class="custom-cursor" data-cursor></div>
+
+<!-- Site Header -->
+<header class="site-header" id="siteHeader">
+  <nav class="navbar" aria-label="Primary Navigation">
+    <a href="index.html" class="brand">
+      <img src="images/last-Photoroom.png" alt="Little Learners Kindergarten logo">
+    </a>
+    <ul class="nav-links">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="about.html">About Us</a></li>
+      <li><a href="programs.html">Programs</a></li>
+      <li><a href="admissions.html">Admissions</a></li>
+      <li><a href="blog.html">Blog</a></li>
+      <li><a href="contact.html" class="active">Contact</a></li>
+    </ul>
+    <div class="nav-actions">
+      <div class="search-wrap">
+        <form action="https://www.google.com/search" class="search" id="search-bar">
+          <input type="search" placeholder="Say something..." name="q" class="search__input" aria-label="Search site">
+          <button type="button" class="search__button" id="search-button" aria-label="Open search">
+            <i class="ri-search-2-line search__icon"></i>
+            <i class="ri-close-line search__close"></i>
+          </button>
+        </form>
+      </div>
+      <button class="burger" id="burgerBtn" aria-label="Open menu" aria-expanded="false" aria-controls="mobileNav">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="18" x2="21" y2="18"/></svg>
+      </button>
+    </div>
+  </nav>
+</header>
+
+<!-- Mobile Navigation Drawer -->
+<div class="mobile-nav" id="mobileNav">
+  <div class="mobile-nav-top">
+    <a href="index.html" class="brand">
+      <img src="images/last-Photoroom.png" alt="Little Learners Kindergarten logo">
+    </a>
+    <button class="icon-btn" id="closeBurger" aria-label="Close menu">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
+    </button>
+  </div>
+  <a href="index.html">Home</a>
+  <a href="about.html">About Us</a>
+  <a href="programs.html">Programs</a>
+  <a href="admissions.html">Admissions</a>
+  <a href="blog.html">Blog</a>
+  <a href="contact.html" class="active">Contact</a>
+</div>
+
+<main id="top">
+
+  <!-- ============ PAGE SUBHEADER HERO ============ -->
+  <section class="page-subheader-hero" aria-label="Contact Us Header">
+    <img src="images/sun.png" alt="" class="hero-doodle doodle-left" aria-hidden="true">
+    <img src="images/banner-shape7.png" alt="" class="hero-doodle doodle-right" aria-hidden="true">
+
+    <div class="container" data-aos>
+      <h1>Contact Us</h1>
+      <nav class="page-breadcrumb" aria-label="Breadcrumb">
+        <a href="index.html"><i class="ri-home-4-line"></i> Home</a>
+        <i class="ri-arrow-right-s-line sep"></i>
+        <span>Contact Us</span>
+      </nav>
+    </div>
+
+    <!-- Scalloped / Cloud Bottom Wave -->
+    <div class="cloud-wave-bottom" aria-hidden="true">
+      <svg viewBox="0 0 1200 120" preserveAspectRatio="none">
+        <path d="M0,0 C150,90 350,-40 500,40 C650,110 900,-20 1200,50 L1200,120 L0,120 Z"></path>
+      </svg>
+    </div>
+  </section>
+
+  <!-- ============ GET IN TOUCH ============ -->
+  <section class="contact-section" aria-label="Get in Touch">
+    <div class="container">
+      <div class="section-head text-center" data-aos>
+        <span class="eyebrow"><i class="ri-chat-3-fill"></i> Get in Touch</span>
+        <h2>Contact Us</h2>
+        <p class="section-desc">We'd love to hear from you! Whether you have questions about admissions, our programs, or visiting our kindergarten, our friendly team is here to help every step of the way.</p>
+      </div>
+
+      <div class="story-grid">
+        <div class="story-copy" data-aos>
+          <ul class="contact-info">
+            <li>
+              <a href="tel:+11234567860"><i class="ri-phone-fill"></i><span>+1 123-456-7860</span></a>
+            </li>
+            <li>
+              <a href="mailto:info@littlelearners.com"><i class="ri-mail-fill"></i><span>info@littlelearners.com</span></a>
+            </li>
+            <li>
+              <a href="https://maps.google.com/?q=221+Sunflower+Lane,+Springfield" target="_blank" rel="noopener"><i class="ri-map-pin-2-fill"></i><span>221 Sunflower Lane, Springfield</span></a>
+            </li>
+          </ul>
+          <iframe class="footer-map" title="Little Learners Kindergarten location map" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3683.6881752848753!2d88.38764907606661!3d22.590763079478727!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3a027612f703a9eb%3A0x4bc41103c92a758e!2sArena%20Animation%20Ultadanga%20-%20VFX%20%26%20Animation%20Training%20in%20Kolkata!5e0!3m2!1sen!2sin!4v1786038449403!5m2!1sen!2sin" loading="lazy" width="100%" height="320"></iframe>
+        </div>
+
+        <div class="story-copy" data-aos>
+          <div class="story-badge">Send Us a Message</div>
+          <form id="contactForm" class="modal-form" novalidate>
+            <div class="form-group">
+              <label for="contactName">Parent Full Name</label>
+              <input type="text" id="contactName" placeholder="e.g. Jane Doe" required>
+            </div>
+            <div class="form-row">
+              <div class="form-group">
+                <label for="contactEmail">Email Address</label>
+                <input type="email" id="contactEmail" placeholder="jane@example.com" required>
+              </div>
+              <div class="form-group">
+                <label for="contactPhone">Phone Number</label>
+                <input type="tel" id="contactPhone" placeholder="(555) 000-0000" required>
+              </div>
+            </div>
+            <div class="form-group">
+              <label for="contactMessage">Message</label>
+              <textarea id="contactMessage" rows="4" placeholder="How can we help?" required></textarea>
+            </div>
+            <button type="submit" class="btn btn-primary btn-block">
+              Send Message
+              <i class="ri-send-plane-fill"></i>
+            </button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+<!-- ============ FOOTER ============ -->
+<footer class="site-footer" id="footer">
+  <div class="c-ft-shape" aria-hidden="true">
+    <img src="images/our-program-shape1-1.png" alt="" class="cloud-shape-img">
+  </div>
+
+  <!-- Cherry Blossom Floating Doodles in Footer -->
+  <svg class="cherry-blossom blossom-sway-slow" viewBox="0 0 100 100" width="60" height="60" style="top: 15%; left: 3%;" aria-hidden="true">
+    <g fill="none" stroke-linecap="round" stroke-linejoin="round">
+      <path d="M50 50 C40 20, 60 20, 50 50 Z" fill="url(#blossomGrad1)" stroke="#ff407d" stroke-width="1.2" transform="rotate(0 50 50)"/>
+      <path d="M50 50 C40 20, 60 20, 50 50 Z" fill="url(#blossomGrad1)" stroke="#ff407d" stroke-width="1.2" transform="rotate(72 50 50)"/>
+      <path d="M50 50 C40 20, 60 20, 50 50 Z" fill="url(#blossomGrad1)" stroke="#ff407d" stroke-width="1.2" transform="rotate(144 50 50)"/>
+      <path d="M50 50 C40 20, 60 20, 50 50 Z" fill="url(#blossomGrad1)" stroke="#ff407d" stroke-width="1.2" transform="rotate(216 50 50)"/>
+      <path d="M50 50 C40 20, 60 20, 50 50 Z" fill="url(#blossomGrad1)" stroke="#ff407d" stroke-width="1.2" transform="rotate(288 50 50)"/>
+      <circle cx="50" cy="50" r="6" fill="#ffe066" stroke="#ffb703" stroke-width="1"/>
+    </g>
+    <defs>
+      <linearGradient id="blossomGrad1" x1="0%" y1="0%" x2="0%" y2="100%">
+        <stop offset="0%" stop-color="#fff0f5" />
+        <stop offset="60%" stop-color="#ff9ebb" />
+        <stop offset="100%" stop-color="#ff407d" />
+      </linearGradient>
+    </defs>
+  </svg>
+  <svg class="cherry-blossom blossom-float" viewBox="0 0 100 100" width="50" height="50" style="top: 20%; right: 4%;" aria-hidden="true">
+    <g fill="none" stroke-linecap="round" stroke-linejoin="round">
+      <path d="M50 50 C40 20, 60 20, 50 50 Z" fill="url(#blossomGrad1)" stroke="#ff407d" stroke-width="1.2" transform="rotate(0 50 50)"/>
+      <path d="M50 50 C40 20, 60 20, 50 50 Z" fill="url(#blossomGrad1)" stroke="#ff407d" stroke-width="1.2" transform="rotate(72 50 50)"/>
+      <path d="M50 50 C40 20, 60 20, 50 50 Z" fill="url(#blossomGrad1)" stroke="#ff407d" stroke-width="1.2" transform="rotate(144 50 50)"/>
+      <path d="M50 50 C40 20, 60 20, 50 50 Z" fill="url(#blossomGrad1)" stroke="#ff407d" stroke-width="1.2" transform="rotate(216 50 50)"/>
+      <path d="M50 50 C40 20, 60 20, 50 50 Z" fill="url(#blossomGrad1)" stroke="#ff407d" stroke-width="1.2" transform="rotate(288 50 50)"/>
+      <circle cx="50" cy="50" r="6" fill="#ffe066" stroke="#ffb703" stroke-width="1"/>
+    </g>
+  </svg>
+
+  <div class="container footer-grid">
+    <div class="footer-about" data-aos>
+      <div class="footer-brand">
+        <a href="index.html">
+          <img src="images/last-Photoroom.png" alt="Little Learners Kindergarten logo">
+        </a>
+      </div>
+      <p>A joyful, nurturing kindergarten helping every child build confidence, curiosity and a love of learning that lasts.</p>
+      <div class="footer-social">
+        <a href="#" aria-label="Instagram"><i class="ri-instagram-line"></i></a>
+        <a href="#" aria-label="Facebook"><i class="ri-facebook-fill"></i></a>
+        <a href="#" aria-label="YouTube"><i class="ri-youtube-fill"></i></a>
+        <a href="#" aria-label="LinkedIn"><i class="ri-linkedin-fill"></i></a>
+      </div>
+    </div>
+    <div class="footer-col" data-aos>
+      <h4>Quick Links</h4>
+      <ul>
+        <li><a href="index.html"><i class="ri-arrow-right-s-line"></i> Home</a></li>
+        <li><a href="about.html"><i class="ri-arrow-right-s-line"></i> About Us</a></li>
+        <li><a href="programs.html"><i class="ri-arrow-right-s-line"></i> Our Programs</a></li>
+        <li><a href="admissions.html"><i class="ri-arrow-right-s-line"></i> Admissions</a></li>
+        <li><a href="blog.html"><i class="ri-arrow-right-s-line"></i> Our Blog</a></li>
+      </ul>
+    </div>
+    <div class="footer-col" data-aos>
+      <h4>Programs</h4>
+      <ul>
+        <li><a href="programs.html"><i class="ri-arrow-right-s-line"></i> Toddler Playgroup</a></li>
+        <li><a href="programs.html"><i class="ri-arrow-right-s-line"></i> Preschool &amp; Nursery</a></li>
+        <li><a href="programs.html"><i class="ri-arrow-right-s-line"></i> Junior KG</a></li>
+        <li><a href="programs.html"><i class="ri-arrow-right-s-line"></i> Senior KG</a></li>
+      </ul>
+    </div>
+    <div class="footer-col" data-aos>
+      <h4>Contact Us</h4>
+      <ul class="footer-contact">
+        <li>
+          <i class="ri-phone-fill"></i>
+          <span>+1 123-456-7860</span>
+        </li>
+        <li>
+          <i class="ri-mail-fill"></i>
+          <span>info@littlelearners.com</span>
+        </li>
+        <li>
+          <i class="ri-map-pin-2-fill"></i>
+          <span>221 Sunflower Lane, Springfield</span>
+        </li>
+      </ul>
+      <button class="btn btn-primary btn-sm open-program-modal-btn" style="margin-top: 10px;">Book a Visit
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+      </button>
+    </div>
+  </div>
+  <div class="container footer-bottom">
+    <span>© 2026 Little Learners Kindergarten. All rights reserved.</span>
+    <span><a href="#">Privacy Policy</a> · <a href="#">Terms of Service</a></span>
+  </div>
+</footer>
+
+<!-- Back to top button -->
+<button id="backToTop" aria-label="Back to Top"><i class="ri-arrow-up-line"></i></button>
+
+<!-- Campus Tour Schedule Modal -->
+<div class="modal-overlay" id="tourModal" aria-hidden="true">
+  <div class="modal-card" role="dialog" aria-modal="true" aria-labelledby="modalTitle">
+    <button class="modal-close" id="closeTourModalBtn" aria-label="Close modal">&times;</button>
+    <div class="modal-header">
+      <span class="eyebrow"><i class="ri-calendar-event-fill"></i> Campus Tour</span>
+      <h3 id="modalTitle">Schedule Your Visit</h3>
+      <p>Choose a convenient time to explore our campus with your child.</p>
+    </div>
+    <form id="tourScheduleForm" class="modal-form">
+      <div class="form-group">
+        <label for="parentName">Parent Full Name</label>
+        <input type="text" id="parentName" placeholder="e.g. Jane Doe" required>
+      </div>
+      <div class="form-row">
+        <div class="form-group">
+          <label for="parentEmail">Email Address</label>
+          <input type="email" id="parentEmail" placeholder="jane@example.com" required>
+        </div>
+        <div class="form-group">
+          <label for="parentPhone">Phone Number</label>
+          <input type="tel" id="parentPhone" placeholder="(555) 000-0000" required>
+        </div>
+      </div>
+      <div class="form-row">
+        <div class="form-group">
+          <label for="childAge">Child's Age Group</label>
+          <select id="childAge" required>
+            <option value="">Select age</option>
+            <option value="toddler">Toddler (1.5 - 3 yrs)</option>
+            <option value="preschool">Preschool (3 - 4 yrs)</option>
+            <option value="prek">Pre-K (4 - 5 yrs)</option>
+            <option value="kindergarten">Kindergarten (5 - 6 yrs)</option>
+          </select>
+        </div>
+        <div class="form-group">
+          <label for="preferredDate">Preferred Date</label>
+          <input type="date" id="preferredDate" required>
+        </div>
+      </div>
+      <button type="submit" class="btn btn-primary btn-block">
+        Confirm Tour Request
+        <i class="ri-check-line"></i>
+      </button>
+    </form>
+  </div>
+</div>
+
+<!-- Scripts -->
+<script src="script.js"></script>
+</body>
+</html>

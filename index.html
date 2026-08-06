@@ -1,0 +1,556 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Little Learners Kindergarten | Where Little Minds Grow Bright</title>
+<meta name="description" content="Welcome to Little Learners Kindergarten - safe, nurturing, and play-based education for early childhood growth and bright futures.">
+<meta property="og:title" content="Little Learners Kindergarten | Where Little Minds Grow Bright">
+<meta property="og:description" content="Discover play-based learning, certified educators, and safe early childhood education at Little Learners Kindergarten.">
+<meta property="og:type" content="website">
+
+<!-- Preconnect Fonts -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@500;600;700;800&family=Nunito:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+<!-- Remix Icons & Styles -->
+<link href="https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+<script type="module" src="reticle-dev.js"></script>
+</head>
+<body>
+
+<!-- Loader -->
+<div class="loader-overlay" id="loaderOverlay">
+  <div class="loader-container md">
+    <div class="loader-spinner">
+      <div class="loader-ring"></div>
+      <div class="loader-ring"></div>
+      <div class="loader-ring"></div>
+      <div class="loader-ring"></div>
+    </div>
+    
+  </div>
+</div>
+
+<div class="custom-cursor" data-cursor></div>
+
+<header class="site-header" id="siteHeader">
+  <nav class="navbar" aria-label="Primary Navigation">
+    <a href="#top" class="brand">
+      <img src="images/last-Photoroom.png" alt="Little Learners Kindergarten logo">
+    </a>
+    <ul class="nav-links">
+      <li><a href="#top" class="active">Home</a></li>
+      <li><a href="about.html">About Us</a></li>
+      <li><a href="programs.html">Programs</a></li>
+      <li><a href="admissions.html">Admissions</a></li>
+      <li><a href="blog.html">Blog</a></li>
+      <li><a href="contact.html">Contact</a></li>
+    </ul>
+    <div class="nav-actions">
+      <div class="search-wrap">
+        <form action="https://www.google.com/search" class="search" id="search-bar">
+          <input type="search" placeholder="Say something..." name="q" class="search__input" aria-label="Search site" data-testid="search-input">
+          <button type="button" class="search__button" id="search-button" aria-label="Open search" data-testid="search-button">
+            <i class="ri-search-2-line search__icon"></i>
+            <i class="ri-close-line search__close"></i>
+          </button>
+        </form>
+      </div>
+      <button class="burger" id="burgerBtn" aria-label="Open menu" aria-expanded="false" aria-controls="mobileNav" data-testid="burger-btn">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="18" x2="21" y2="18"/></svg>
+      </button>
+    </div>
+  </nav>
+</header>
+
+<!-- ============ MOBILE NAV ============ -->
+<div class="mobile-nav" id="mobileNav">
+  <div class="mobile-nav-top">
+    <a href="#top" class="brand">
+      <img src="images/last-Photoroom.png" alt="Little Learners Kindergarten logo">
+    </a>
+    <button class="icon-btn" id="closeBurger" aria-label="Close menu">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
+    </button>
+  </div>
+  <a href="#top">Home</a>
+  <a href="about.html">About Us</a>
+  <a href="programs.html">Programs</a>
+  <a href="admissions.html">Admissions</a>
+  <a href="blog.html">Blog</a>
+  <a href="contact.html">Contact</a>
+</div>
+<main id="top">
+
+  <!-- ============ HERO ============ -->
+  <section class="hero" aria-label="Introduction">
+    <div class="container hero-grid">
+      <div class="hero-copy" data-aos>
+        <h1>
+          <span class="line-1">A Happy Place</span>
+          <span class="line-2">For Little Learners</span>
+          <span class="line-3">To Shine</span>
+        </h1>
+        <p class="lead">A warm, joyful kindergarten where children explore, create, and grow with caring teachers in a space built for confidence, curiosity, and happy little milestones.</p>
+        <div class="hero-cta">
+          <a href="#programs" class="btn btn-primary">
+            Explore More
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+          </a>
+        </div>
+      </div>
+
+      <div class="hero-visual" data-aos>
+        <div class="blob-frame">
+          <div class="blob-shape">
+            <img src="images/HERO1IMG.png" alt="Smiling child holding a yellow ball in the classroom">
+          </div>
+          <div class="badge-float badge-top-right">
+            <span class="yr">2026</span>
+            <span class="adm">Admission Open</span>
+          </div>
+          <div class="badge-pill">
+            <span class="dot">🎨</span>
+            <span>
+              <strong>Creative Play</strong>
+              <span>daily activities</span>
+            </span>
+          </div>
+        </div>
+        <img src="images/sun.png" class="doodle doodle-spin" alt="" aria-hidden="true" style="top:-4%; right:6%; width:56px;">
+        <img src="images/love.png" class="doodlel doodle-sway" alt="" aria-hidden="true" style="top:38%; left:-8%; width:60px;">
+        <img src="images/banner-shape7.png"class="doodler doodle-sway" alt="" aria-hidden="true">
+
+        <!-- Cherry Blossom Doodles -->
+        <svg class="cherry-blossom blossom-sway-slow" viewBox="0 0 100 100" width="58" height="58" style="top:-6%; left:2%;" aria-hidden="true">
+          <g fill="none" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M50 50 C40 20, 60 20, 50 50 Z" fill="url(#blossomGrad3)" stroke="#ff407d" stroke-width="1.2" transform="rotate(0 50 50)"/>
+            <path d="M50 50 C40 20, 60 20, 50 50 Z" fill="url(#blossomGrad3)" stroke="#ff407d" stroke-width="1.2" transform="rotate(72 50 50)"/>
+            <path d="M50 50 C40 20, 60 20, 50 50 Z" fill="url(#blossomGrad3)" stroke="#ff407d" stroke-width="1.2" transform="rotate(144 50 50)"/>
+            <path d="M50 50 C40 20, 60 20, 50 50 Z" fill="url(#blossomGrad3)" stroke="#ff407d" stroke-width="1.2" transform="rotate(216 50 50)"/>
+            <path d="M50 50 C40 20, 60 20, 50 50 Z" fill="url(#blossomGrad3)" stroke="#ff407d" stroke-width="1.2" transform="rotate(288 50 50)"/>
+            <circle cx="50" cy="50" r="6" fill="#ffe066" stroke="#ffb703" stroke-width="1"/>
+          </g>
+          <defs>
+            <linearGradient id="blossomGrad3" x1="0%" y1="0%" x2="0%" y2="100%">
+              <stop offset="0%" stop-color="#fff0f5" />
+              <stop offset="60%" stop-color="#ff9ebb" />
+              <stop offset="100%" stop-color="#ff407d" />
+            </linearGradient>
+          </defs>
+        </svg>
+        <div class="cherry-petal" style="top: 25%; right: 0%; animation-delay: 2s;"></div>
+      </div>
+    </div>
+    <div class="hero-banner-wrap">
+      <img src="images/banner-shape2-1.png" alt="" class="hero-banner">
+    </div>
+  </section>
+
+  <!-- ============ ABOUT ============ -->
+  <section class="about" id="about" aria-label="About us">
+    <div class="container about-grid">
+      <div class="about-visual" data-aos>
+        <div class="about-blob">
+          <img src="images/about-1.png" alt="">
+        </div>
+      </div>
+      <div class="about-copy" data-aos>
+        <span class="eyebrow">About Us</span>
+        <div class="abt-txt"><h2>Warm Care, Big Smiles, and a Strong Start for Every Child</h2></div>
+        <p>At Little Learners, we create a cheerful environment where children feel loved, encouraged, and excited to learn. Our thoughtful programs support early growth, social confidence, and joyful discovery, helping families feel at ease while their child builds a bright beginning.</p>
+        <a href="about.html" class="btn btn-primary">
+          Read Our Full Story
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ PROGRAMS ============ -->
+  <section class="programs" id="programs" aria-label="Our programs">
+    <div class="container">
+      <div class="section-head" data-aos>
+        <span class="eyebrow orange">Our Programs</span>
+        <h2>A Program for Every Little Step</h2>
+      </div>
+      <div class="program-grid">
+        <article class="program-card pc-1" data-aos>
+          <div class="program-icon">🧸</div>
+          <h3>Toddler</h3>
+          <span class="age">1.5 - 3 years</span>
+          <p>Gentle routines and playful discovery that help little ones feel safe, curious, and loved.</p>
+          <a href="#footer" class="text-link">Learn More
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+          </a>
+        </article>
+        <article class="program-card pc-2" data-aos>
+          <div class="program-icon">🧩</div>
+          <h3>Preschool</h3>
+          <span class="age">3 - 4 years</span>
+          <p>Fun, hands-on activities that build early skills while keeping each day exciting for young learners.</p>
+          <a href="#footer" class="text-link">Learn More
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+          </a>
+        </article>
+        <article class="program-card pc-3" data-aos>
+          <div class="program-icon">📚</div>
+          <h3>Pre-K Program</h3>
+          <span class="age">4 - 5 years</span>
+          <p>A joyful step toward school readiness with caring guidance, structure, and lots of encouragement.</p>
+          <a href="#footer" class="text-link">Learn More
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+          </a>
+        </article>
+        <article class="program-card pc-4" data-aos>
+          <div class="program-icon">🎒</div>
+          <h3>Kindergarten</h3>
+          <span class="age">5 - 6 years</span>
+          <p>Creative lessons and guided play that help children grow in confidence, kindness, and curiosity.</p>
+          <a href="#footer" class="text-link">Learn More
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+          </a>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ TEACHERS ============ -->
+  <section class="teachers" id="teachers" aria-label="Meet our teachers">
+    <div class="container">
+      <div class="section-head" data-aos>
+        <span class="eyebrow green">Our Teachers</span>
+        <h2>Meet the Caring Teachers Guiding Little Hearts</h2>
+      </div>
+      <div class="teacher-grid">
+        <article class="teacher-card" data-aos>
+          <div class="teacher-photo">
+            <img src="images/teacher-fred.jpg" alt="Fred Lambert teaching at the whiteboard">
+            <div class="teacher-social">
+              <a href="#" aria-label="Fred Lambert on Facebook"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M22 12a10 10 0 1 0-11.6 9.9v-7H7.9V12h2.5V9.8c0-2.5 1.5-3.9 3.8-3.9 1.1 0 2.2.2 2.2.2v2.5h-1.3c-1.2 0-1.6.8-1.6 1.6V12h2.8l-.4 2.9h-2.4v7A10 10 0 0 0 22 12z"/></svg></a>
+              <a href="#" aria-label="Fred Lambert on Instagram"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1"/></svg></a>
+            </div>
+          </div>
+          <h3>Fred Lambert</h3>
+          <span class="role">Lead Preschool Teacher</span>
+        </article>
+        <article class="teacher-card" data-aos>
+          <div class="teacher-photo">
+            <img src="images/teacher-sarah.jpg" alt="Sarah William standing by the chalkboard">
+            <div class="teacher-social">
+              <a href="#" aria-label="Sarah William on Facebook"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M22 12a10 10 0 1 0-11.6 9.9v-7H7.9V12h2.5V9.8c0-2.5 1.5-3.9 3.8-3.9 1.1 0 2.2.2 2.2.2v2.5h-1.3c-1.2 0-1.6.8-1.6 1.6V12h2.8l-.4 2.9h-2.4v7A10 10 0 0 0 22 12z"/></svg></a>
+              <a href="#" aria-label="Sarah William on Instagram"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1"/></svg></a>
+            </div>
+          </div>
+          <h3>Sarah William</h3>
+          <span class="role">Early Childhood Educator</span>
+        </article>
+        <article class="teacher-card" data-aos>
+          <div class="teacher-photo">
+            <img src="images/teacher-olivia.jpg" alt="Olivia Mitchell helping students with an activity">
+            <div class="teacher-social">
+              <a href="#" aria-label="Olivia Mitchell on Facebook"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M22 12a10 10 0 1 0-11.6 9.9v-7H7.9V12h2.5V9.8c0-2.5 1.5-3.9 3.8-3.9 1.1 0 2.2.2 2.2.2v2.5h-1.3c-1.2 0-1.6.8-1.6 1.6V12h2.8l-.4 2.9h-2.4v7A10 10 0 0 0 22 12z"/></svg></a>
+              <a href="#" aria-label="Olivia Mitchell on Instagram"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1"/></svg></a>
+            </div>
+          </div>
+          <h3>Olivia Mitchell</h3>
+          <span class="role">Creative Learning Specialist</span>
+        </article>
+      </div>
+    </div>
+     <img src="images/banner-shape4.png" class="doodle1 doodle-sway" alt="" aria-hidden="true">
+     <img src="images/love.png" class="doodle2 doodle-sway" alt="" aria-hidden="true">
+  </section>
+
+  <!-- ============ STATS + TIMINGS ============ -->
+  <section class="stats" aria-label="Our numbers">
+    <div class="container">
+      <div class="stats-grid">
+        <div class="stat-item" data-aos>
+          <svg class="stat-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M4 19V7a2 2 0 0 1 2-2h9l5 5v9a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2Z"/><path d="M15 5v5h5"/></svg>
+          <div class="stat-number" data-count="563">0</div>
+          <div class="stat-label">Expert Instructors</div>
+        </div>
+        <div class="stat-item" data-aos>
+          <svg class="stat-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><rect x="3" y="4" width="18" height="16" rx="2"/><path d="M3 9h18M8 3v3M16 3v3"/></svg>
+          <div class="stat-number" data-count="6539">0</div>
+          <div class="stat-label">Classes Completed</div>
+        </div>
+        <div class="stat-item" data-aos>
+          <svg class="stat-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 3"/></svg>
+          <div class="stat-number" data-count="34">0</div>
+          <div class="stat-label">Years of Experience</div>
+        </div>
+        <div class="stat-item" data-aos>
+          <svg class="stat-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M22 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+          <div class="stat-number" data-count="6632">0</div>
+          <div class="stat-label">Students Enrolled</div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <div class="timings-card" data-aos>
+    <div class="timings-copy">
+      <span class="eyebrow">Session Timings</span>
+      <h3>Our Session Timings</h3>
+      <p>Our classes are thoughtfully designed to bring the best out in every child, at every time of day.</p>
+    </div>
+    <div class="timings-list">
+      <div class="timing-row">
+        <span class="t-icon">🌤️</span>
+        <span><strong>Morning</strong><span>Circle time &amp; guided play</span></span>
+        <span class="time">10:00am - 12:00pm</span>
+      </div>
+      <div class="timing-row">
+        <span class="t-icon">🍽️</span>
+        <span><strong>Lunch</strong><span>Rest &amp; nourishment</span></span>
+        <span class="time">12:00pm - 1:00pm</span>
+      </div>
+      <div class="timing-row">
+        <span class="t-icon">🎨</span>
+        <span><strong>Afternoon</strong><span>Creative activities</span></span>
+        <span class="time">2:00pm - 4:00pm</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- ============ TESTIMONIALS ============ -->
+  <section class="testimonials" id="testimonials" aria-label="Testimonials">
+    <div class="container">
+      <div class="section-head" data-aos>
+        <span class="eyebrow">Our Testimonials</span>
+        <h2>What Parents Say About Our Kindergarten</h2>
+      </div>
+      <div class="test-track-wrap" data-aos>
+        <div class="test-nav" aria-label="Testimonial carousel controls">
+          <button class="btn btn-primary btn-sm test-nav-btn" id="testPrev" type="button" aria-label="Previous testimonial">←</button>
+          <button class="btn btn-primary btn-sm test-nav-btn" id="testNext" type="button" aria-label="Next testimonial">→</button>
+        </div>
+        <div class="test-track" id="testTrack">
+          <div class="test-card">
+            <div class="stars" aria-label="5 out of 5 stars">
+              <svg viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15 9 22 9.3 16.5 14 18.2 21 12 17.3 5.8 21 7.5 14 2 9.3 9 9"/></svg>
+              <svg viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15 9 22 9.3 16.5 14 18.2 21 12 17.3 5.8 21 7.5 14 2 9.3 9 9"/></svg>
+              <svg viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15 9 22 9.3 16.5 14 18.2 21 12 17.3 5.8 21 7.5 14 2 9.3 9 9"/></svg>
+              <svg viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15 9 22 9.3 16.5 14 18.2 21 12 17.3 5.8 21 7.5 14 2 9.3 9 9"/></svg>
+              <svg viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15 9 22 9.3 16.5 14 18.2 21 12 17.3 5.8 21 7.5 14 2 9.3 9 9"/></svg>
+            </div>
+            <p>Little Learners has been a wonderful experience for our child. The teachers are caring, and the environment feels genuinely safe and welcoming.</p>
+            <div class="test-person">
+              <span class="test-avatar"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="8" r="4"/><path d="M4 20c0-4 4-6 8-6s8 2 8 6"/></svg></span>
+              <span><strong>Maria Chen</strong><span>Parent</span></span>
+            </div>
+          </div>
+          <div class="test-card">
+            <div class="stars" aria-label="5 out of 5 stars">
+              <svg viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15 9 22 9.3 16.5 14 18.2 21 12 17.3 5.8 21 7.5 14 2 9.3 9 9"/></svg>
+              <svg viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15 9 22 9.3 16.5 14 18.2 21 12 17.3 5.8 21 7.5 14 2 9.3 9 9"/></svg>
+              <svg viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15 9 22 9.3 16.5 14 18.2 21 12 17.3 5.8 21 7.5 14 2 9.3 9 9"/></svg>
+              <svg viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15 9 22 9.3 16.5 14 18.2 21 12 17.3 5.8 21 7.5 14 2 9.3 9 9"/></svg>
+              <svg viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15 9 22 9.3 16.5 14 18.2 21 12 17.3 5.8 21 7.5 14 2 9.3 9 9"/></svg>
+            </div>
+            <p>From day one, our son has been excited to go to school. The staff genuinely know each child and celebrate every small milestone.</p>
+            <div class="test-person">
+              <span class="test-avatar"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="8" r="4"/><path d="M4 20c0-4 4-6 8-6s8 2 8 6"/></svg></span>
+              <span><strong>David Okafor</strong><span>Parent</span></span>
+            </div>
+          </div>
+          <div class="test-card">
+            <div class="stars" aria-label="5 out of 5 stars">
+              <svg viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15 9 22 9.3 16.5 14 18.2 21 12 17.3 5.8 21 7.5 14 2 9.3 9 9"/></svg>
+              <svg viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15 9 22 9.3 16.5 14 18.2 21 12 17.3 5.8 21 7.5 14 2 9.3 9 9"/></svg>
+              <svg viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15 9 22 9.3 16.5 14 18.2 21 12 17.3 5.8 21 7.5 14 2 9.3 9 9"/></svg>
+              <svg viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15 9 22 9.3 16.5 14 18.2 21 12 17.3 5.8 21 7.5 14 2 9.3 9 9"/></svg>
+              <svg viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15 9 22 9.3 16.5 14 18.2 21 12 17.3 5.8 21 7.5 14 2 9.3 9 9"/></svg>
+            </div>
+            <p>The session timings work perfectly with our schedule, and the communication from teachers is thoughtful and consistent every week.</p>
+            <div class="test-person">
+              <span class="test-avatar"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="8" r="4"/><path d="M4 20c0-4 4-6 8-6s8 2 8 6"/></svg></span>
+              <span><strong>Priya Nair</strong><span>Parent</span></span>
+            </div>
+          </div>
+          <div class="test-card">
+            <div class="stars" aria-label="5 out of 5 stars">
+              <svg viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15 9 22 9.3 16.5 14 18.2 21 12 17.3 5.8 21 7.5 14 2 9.3 9 9"/></svg>
+              <svg viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15 9 22 9.3 16.5 14 18.2 21 12 17.3 5.8 21 7.5 14 2 9.3 9 9"/></svg>
+              <svg viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15 9 22 9.3 16.5 14 18.2 21 12 17.3 5.8 21 7.5 14 2 9.3 9 9"/></svg>
+              <svg viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15 9 22 9.3 16.5 14 18.2 21 12 17.3 5.8 21 7.5 14 2 9.3 9 9"/></svg>
+              <svg viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15 9 22 9.3 16.5 14 18.2 21 12 17.3 5.8 21 7.5 14 2 9.3 9 9"/></svg>
+            </div>
+            <p>We toured three schools before choosing Little Learners. The moment we walked in, our daughter didn't want to leave. That said it all.</p>
+            <div class="test-person">
+              <span class="test-avatar"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="8" r="4"/><path d="M4 20c0-4 4-6 8-6s8 2 8 6"/></svg></span>
+              <span><strong>James Whitfield</strong><span>Parent</span></span>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="test-dots" id="testDots"></div>
+    </div>
+  </section>
+
+  <!-- ============ BLOG ============ -->
+  <section class="blog" id="blog" aria-label="Blog and news">
+    <div class="container">
+      <div class="section-head" data-aos>
+        <span class="eyebrow orange">Our Blog &amp; News</span>
+        <h2>View Our Latest Blog, Trends and Insights</h2>
+      </div>
+      <div class="blog-grid">
+        <article class="blog-card" data-aos>
+          <div class="blog-thumb">
+            <img src="images/blog-img1.png" alt="Children building friendships during a classroom activity">
+            <span class="blog-cat cat-blue">Mindfulness</span>
+          </div>
+          <div class="blog-body">
+            <h3>Creating Friendships and Memories in School</h3>
+            <div class="blog-meta">
+              <span class="test-avatar"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="8" r="4"/><path d="M4 20c0-4 4-6 8-6s8 2 8 6"/></svg></span>
+              <div><strong>Michael Reyes</strong><span>Jun 12, 2026</span></div>
+            </div>
+            <a href="#" class="text-link">Read More
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+            </a>
+          </div>
+        </article>
+        <article class="blog-card" data-aos>
+          <div class="blog-thumb">
+            <img src="images/blog-img2.png" alt="Child discovering a hands-on learning activity">
+            <span class="blog-cat cat-green">Education</span>
+          </div>
+          <div class="blog-body">
+            <h3>Discovering the Joys of Child Kindergarten</h3>
+            <div class="blog-meta">
+              <span class="test-avatar"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="8" r="4"/><path d="M4 20c0-4 4-6 8-6s8 2 8 6"/></svg></span>
+              <div><strong>Michael Reyes</strong><span>Jun 5, 2026</span></div>
+            </div>
+            <a href="#" class="text-link">Read More
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+            </a>
+          </div>
+        </article>
+        <article class="blog-card" data-aos>
+          <div class="blog-thumb">
+            <img src="images/blog-img3.png" alt="Children preparing for their first day of school">
+            <span class="blog-cat cat-orange">Activities</span>
+          </div>
+          <div class="blog-body">
+            <h3>How to Prepare Your Child for Their First Day</h3>
+            <div class="blog-meta">
+              <span class="test-avatar"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="8" r="4"/><path d="M4 20c0-4 4-6 8-6s8 2 8 6"/></svg></span>
+              <div><strong>Michael Reyes</strong><span>May 28, 2026</span></div>
+            </div>
+            <a href="#" class="text-link">Read More
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+            </a>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ VIDEO ============ -->
+  <section class="video-section" aria-label="School tour video">
+    <div class="container">
+      <div class="video-frame" data-aos>
+
+    <div class="video-feature">
+      <div class="video-feature__embed">
+        <iframe id="videoFrame" width="560" height="315" src="https://www.youtube.com/embed/4NkFMkgh0wY?si=NSw_wdxYFXJQbUHw" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+        <button class="play-btn" aria-label="Play school tour video" type="button">
+          <svg viewBox="0 0 24 24" fill="currentColor"><polygon points="6 3 20 12 6 21 6 3"/></svg>
+        </button>
+        <button class="video-pause-btn" aria-label="Pause school tour video" type="button">
+          <svg viewBox="0 0 24 24" fill="currentColor"><rect x="5" y="4" width="5" height="16" rx="1"/><rect x="14" y="4" width="5" height="16" rx="1"/></svg>
+        </button>
+      </div>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<!-- ============ FOOTER ============ -->
+<footer class="site-footer" id="footer">
+  <div class="c-ft-shape" aria-hidden="true">
+    <img src="images/our-program-shape1-1.png" alt="" class="cloud-shape-img">
+  </div>
+  <div class="container footer-grid">
+    <div class="footer-about" data-aos>
+      <div class="footer-brand">
+        <a href="index.html">
+          <img src="images/last-Photoroom.png" alt="Little Learners Kindergarten logo">
+        </a>
+      </div>
+      <p>A joyful, nurturing kindergarten helping every child build confidence, curiosity and a love of learning that lasts.</p>
+      <div class="footer-social">
+        <a href="#" aria-label="Instagram"><i class="ri-instagram-line"></i></a>
+        <a href="#" aria-label="Facebook"><i class="ri-facebook-fill"></i></a>
+        <a href="#" aria-label="YouTube"><i class="ri-youtube-fill"></i></a>
+        <a href="#" aria-label="LinkedIn"><i class="ri-linkedin-fill"></i></a>
+      </div>
+    </div>
+    <div class="footer-col" data-aos>
+      <h4>Quick Links</h4>
+      <ul>
+        <li><a href="index.html"><i class="ri-arrow-right-s-line"></i> Home</a></li>
+        <li><a href="about.html"><i class="ri-arrow-right-s-line"></i> About Us</a></li>
+        <li><a href="programs.html"><i class="ri-arrow-right-s-line"></i> Our Programs</a></li>
+        <li><a href="admissions.html"><i class="ri-arrow-right-s-line"></i> Admissions</a></li>
+        <li><a href="index.html#blog"><i class="ri-arrow-right-s-line"></i> Our Blog</a></li>
+      </ul>
+    </div>
+    <div class="footer-col" data-aos>
+      <h4>Programs</h4>
+      <ul>
+        <li><a href="programs.html"><i class="ri-arrow-right-s-line"></i> Toddler Playgroup</a></li>
+        <li><a href="programs.html"><i class="ri-arrow-right-s-line"></i> Preschool &amp; Nursery</a></li>
+        <li><a href="programs.html"><i class="ri-arrow-right-s-line"></i> Junior KG</a></li>
+        <li><a href="programs.html"><i class="ri-arrow-right-s-line"></i> Senior KG</a></li>
+      </ul>
+    </div>
+    <div class="footer-col" data-aos>
+      <h4>Contact Us</h4>
+      <ul class="footer-contact">
+        <li>
+          <i class="ri-phone-fill"></i>
+          <span>+1 123-456-7860</span>
+        </li>
+        <li>
+          <i class="ri-mail-fill"></i>
+          <span>info@littlelearners.com</span>
+        </li>
+        <li>
+          <i class="ri-map-pin-2-fill"></i>
+          <span>221 Sunflower Lane, Springfield</span>
+        </li>
+      </ul>
+      <button class="btn btn-primary btn-sm open-program-modal-btn" style="margin-top: 10px;">Book a Visit
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+      </button>
+    </div>
+  </div>
+  <div class="container footer-bottom">
+    <span>© 2026 Little Learners Kindergarten. All rights reserved.</span>
+    <span><a href="#">Privacy Policy</a> · <a href="#">Terms of Service</a></span>
+  </div>
+</footer>
+<button id="backToTop" aria-label="Back to Top">
+  <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" fill="none" viewBox="0 0 24 24">
+    <path d="M12 19V5M5 12l7-7 7 7"
+          stroke="currentColor"
+          stroke-width="2.5"
+          stroke-linecap="round"
+          stroke-linejoin="round"/>
+  </svg>
+</button>
+
+<script src="script.js"></script>
+
+</body>
+</html>

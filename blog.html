@@ -1,0 +1,835 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Blog & Insights - Little Learners Kindergarten</title>
+  <meta name="description" content="Read the latest early childhood education insights, parenting tips, and classroom stories from the Little Learners Kindergarten teaching team.">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@600;700;800&family=Nunito:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/remixicon@3.5.0/fonts/remixicon.css" rel="stylesheet">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- Custom Cursor -->
+  <div class="custom-cursor" data-cursor></div>
+
+  <!-- ============ SITE HEADER / NAVIGATION ============ -->
+  <header class="site-header" id="siteHeader">
+    <nav class="navbar" aria-label="Primary Navigation">
+      <a href="index.html" class="brand">
+        <img src="images/last-Photoroom.png" alt="Little Learners Kindergarten logo">
+      </a>
+      <ul class="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About Us</a></li>
+        <li><a href="programs.html">Programs</a></li>
+        <li><a href="admissions.html">Admissions</a></li>
+        <li><a href="blog.html" class="active">Blog</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+      <div class="nav-actions">
+        <div class="search-wrap">
+          <form action="https://www.google.com/search" class="search" id="search-bar">
+            <input type="search" placeholder="Say something..." name="q" class="search__input" aria-label="Search site" data-testid="search-input">
+            <button type="button" class="search__button" id="search-button" aria-label="Open search" data-testid="search-button">
+              <i class="ri-search-2-line search__icon"></i>
+              <i class="ri-close-line search__close"></i>
+            </button>
+          </form>
+        </div>
+        <button class="burger" id="burgerBtn" aria-label="Open menu" aria-expanded="false" aria-controls="mobileNav" data-testid="burger-btn">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="18" x2="21" y2="18"/></svg>
+        </button>
+      </div>
+    </nav>
+  </header>
+
+  <!-- ============ MOBILE NAV ============ -->
+  <div class="mobile-nav" id="mobileNav">
+    <div class="mobile-nav-top">
+      <a href="index.html" class="brand">
+        <img src="images/last-Photoroom.png" alt="Little Learners Kindergarten logo">
+      </a>
+      <button class="icon-btn" id="closeBurger" aria-label="Close menu">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
+      </button>
+    </div>
+    <a href="index.html">Home</a>
+    <a href="about.html">About Us</a>
+    <a href="programs.html">Programs</a>
+    <a href="admissions.html">Admissions</a>
+    <a href="blog.html" class="active">Blog</a>
+    <a href="contact.html">Contact</a>
+  </div>
+
+  <main id="top">
+
+    <!-- ============ PAGE SUBHEADER HERO ============ -->
+    <section class="page-subheader-hero" aria-label="Blog Header">
+      <img src="images/sun.png" alt="" class="hero-doodle doodle-left" aria-hidden="true">
+      <img src="images/banner-shape7.png" alt="" class="hero-doodle doodle-right" aria-hidden="true">
+
+      <div class="container" data-aos>
+        <h1>Our Blog</h1>
+        <nav class="page-breadcrumb" aria-label="Breadcrumb">
+          <a href="index.html"><i class="ri-home-4-line"></i> Home</a>
+          <i class="ri-arrow-right-s-line sep"></i>
+          <span>Blog &amp; Insights</span>
+        </nav>
+      </div>
+
+      <!-- Scalloped / Cloud Bottom Wave -->
+      <div class="cloud-wave-bottom" aria-hidden="true">
+        <svg viewBox="0 0 1200 120" preserveAspectRatio="none">
+          <path d="M0,0 C150,90 350,-40 500,40 C650,110 900,-20 1200,50 L1200,120 L0,120 Z"></path>
+        </svg>
+      </div>
+    </section>
+
+    <!-- ============ BLOG CONTENT ============ -->
+    <section class="blog-main-section">
+      <div class="container">
+
+        <!-- Filter Bar -->
+        <nav class="blog-filter-bar" aria-label="Blog categories">
+          <button class="blog-filter-btn active" data-filter="all">All Posts</button>
+          <button class="blog-filter-btn" data-filter="education">Education</button>
+          <button class="blog-filter-btn" data-filter="mindfulness">Mindfulness</button>
+          <button class="blog-filter-btn" data-filter="activities">Activities</button>
+          <button class="blog-filter-btn" data-filter="nutrition">Nutrition</button>
+          <button class="blog-filter-btn" data-filter="parenting">Parenting</button>
+        </nav>
+
+        <!-- Main 2-col layout -->
+        <div class="blog-layout">
+
+          <!-- ══ LEFT: Articles ══ -->
+          <div class="blog-articles">
+
+            <!-- Featured Post -->
+            <div class="featured-post" data-aos>
+              <img src="images/blog-hero.jpg" alt="Teacher guiding children in a colorful craft activity">
+              <div class="featured-post-overlay">
+                <span class="cat-tag"><i class="ri-star-fill"></i> Featured</span>
+                <h2>How Play-Based Learning Builds Lifelong Confidence in Early Childhood</h2>
+                <p>Research consistently shows that children who learn through guided play develop stronger emotional intelligence, creativity, and cognitive skills. Here's how we implement it every day.</p>
+                <div class="featured-post-meta-row">
+                  <div class="featured-post-meta">
+                    <div class="author-avatar">SR</div>
+                    <div>
+                      <strong>Sarah Reynolds</strong>
+                      <span>Head of Curriculum · Aug 4, 2026</span>
+                    </div>
+                  </div>
+                  <a href="#" class="featured-read-btn">
+                    Read Article <i class="ri-arrow-right-line"></i>
+                  </a>
+                </div>
+              </div>
+            </div>
+
+            <!-- Quote Block — Style 1: Left border -->
+            <div class="quote-block q-style-1" data-aos>
+              <blockquote>
+                "Tell me and I forget. Teach me and I remember. Involve me and I learn."
+              </blockquote>
+              <cite>Benjamin Franklin, Founding Father &amp; Inventor</cite>
+            </div>
+
+            <!-- Articles Grid -->
+            <div class="articles-grid">
+              <!-- Card 1 -->
+              <article class="article-card" data-aos>
+                <div class="article-card-thumb">
+                  <img src="images/blog-post1.jpg" alt="Children building with colorful blocks together">
+                  <span class="article-cat cat-blue">Education</span>
+                </div>
+                <div class="article-card-body">
+                  <h3>Creating Friendships That Last a Lifetime in Preschool</h3>
+                  <p>Early social bonds are the foundation of emotional intelligence. Discover our structured peer-play curriculum that fosters genuine childhood friendships.</p>
+                  <div class="article-meta">
+                    <div class="article-meta-left">
+                      <div class="mini-avatar">MR</div>
+                      <div>
+                        <strong>Michael Reyes</strong>
+                        <span>Jun 12, 2026 · 5 min read</span>
+                      </div>
+                    </div>
+                    <a href="#" class="read-link">Read <i class="ri-arrow-right-s-line"></i></a>
+                  </div>
+                </div>
+              </article>
+              <!-- Card 2 -->
+              <article class="article-card" data-aos>
+                <div class="article-card-thumb">
+                  <img src="images/blog-post2.jpg" alt="Child painting with bright watercolors on an easel">
+                  <span class="article-cat cat-pink">Mindfulness</span>
+                </div>
+                <div class="article-card-body">
+                  <h3>Art as Mindfulness — Why Creative Expression Calms Young Minds</h3>
+                  <p>Painting, clay, and drawing are far more than just art — they're powerful tools for self-regulation and emotional calm in young children.</p>
+                  <div class="article-meta">
+                    <div class="article-meta-left">
+                      <div class="mini-avatar">LK</div>
+                      <div>
+                        <strong>Laura Kim</strong>
+                        <span>Jul 2, 2026 · 4 min read</span>
+                      </div>
+                    </div>
+                    <a href="#" class="read-link">Read <i class="ri-arrow-right-s-line"></i></a>
+                  </div>
+                </div>
+              </article>
+              <!-- Card 3 -->
+              <article class="article-card" data-aos>
+                <div class="article-card-thumb">
+                  <img src="images/blog-post3.jpg" alt="Children listening to a teacher read a storybook">
+                  <span class="article-cat cat-green">Literacy</span>
+                </div>
+                <div class="article-card-body">
+                  <h3>Story Circles — Building Early Language and Listening Skills</h3>
+                  <p>Our daily story circle ritual does more than teach words — it builds vocabulary, narrative comprehension, and the joy of reading from day one.</p>
+                  <div class="article-meta">
+                    <div class="article-meta-left">
+                      <div class="mini-avatar">PO</div>
+                      <div>
+                        <strong>Priya Oberoi</strong>
+                        <span>Jul 18, 2026 · 6 min read</span>
+                      </div>
+                    </div>
+                    <a href="#" class="read-link">Read <i class="ri-arrow-right-s-line"></i></a>
+                  </div>
+                </div>
+              </article>
+              <!-- Card 4 -->
+              <article class="article-card" data-aos>
+                <div class="article-card-thumb">
+                  <img src="images/blog-post4.jpg" alt="Kids playing on a colorful outdoor playground">
+                  <span class="article-cat cat-orange">Activities</span>
+                </div>
+                <div class="article-card-body">
+                  <h3>Outdoor Play Is Not a Break — It's Core to Our Curriculum</h3>
+                  <p>Gross motor skills, risk assessment, and cooperative play all develop through structured outdoor activity. Here's why we protect every minute of it.</p>
+                  <div class="article-meta">
+                    <div class="article-meta-left">
+                      <div class="mini-avatar">JT</div>
+                      <div>
+                        <strong>James Torres</strong>
+                        <span>Jul 25, 2026 · 5 min read</span>
+                      </div>
+                    </div>
+                    <a href="#" class="read-link">Read <i class="ri-arrow-right-s-line"></i></a>
+                  </div>
+                </div>
+              </article>
+            </div>
+
+            <!-- Quote Block — Style 2: Dark centered inspirational -->
+            <div class="quote-block q-style-2" data-aos style="margin: 48px 0;">
+              <blockquote>
+                "Children are not things to be moulded, but people to be unfolded."
+              </blockquote>
+              <cite>Jess Lair, Author &amp; Psychologist</cite>
+            </div>
+
+            <!-- More Articles Grid -->
+            <div class="articles-grid">
+              <!-- Card 5 -->
+              <article class="article-card" data-aos>
+                <div class="article-card-thumb">
+                  <img src="images/blog-post5.jpg" alt="Children eating a healthy lunch together">
+                  <span class="article-cat cat-green">Nutrition</span>
+                </div>
+                <div class="article-card-body">
+                  <h3>Feeding Growing Minds — Our Approach to Nutrition at School</h3>
+                  <p>Balanced meals and healthy snack habits built in early childhood create a lifetime of good nutrition choices. Here's what's on our menu and why.</p>
+                  <div class="article-meta">
+                    <div class="article-meta-left">
+                      <div class="mini-avatar">AC</div>
+                      <div>
+                        <strong>Amara Collins</strong>
+                        <span>May 28, 2026 · 4 min read</span>
+                      </div>
+                    </div>
+                    <a href="#" class="read-link">Read <i class="ri-arrow-right-s-line"></i></a>
+                  </div>
+                </div>
+              </article>
+              <!-- Card 6 -->
+              <article class="article-card" data-aos>
+                <div class="article-card-thumb">
+                  <img src="images/blog-img1.png" alt="Children building friendships in a classroom">
+                  <span class="article-cat cat-purple">Parenting</span>
+                </div>
+                <div class="article-card-body">
+                  <h3>How to Prepare Your Child for the First Day Without Anxiety</h3>
+                  <p>Transition anxiety is completely normal — for both child and parent. These research-backed strategies ease the process and build real confidence.</p>
+                  <div class="article-meta">
+                    <div class="article-meta-left">
+                      <div class="mini-avatar">SR</div>
+                      <div>
+                        <strong>Sarah Reynolds</strong>
+                        <span>May 10, 2026 · 7 min read</span>
+                      </div>
+                    </div>
+                    <a href="#" class="read-link">Read <i class="ri-arrow-right-s-line"></i></a>
+                  </div>
+                </div>
+              </article>
+            </div>
+
+            <!-- Quote Block — Style 3: Bordered card slide carousel -->
+            <div class="quote-block q-style-3" data-aos style="margin-top: 48px;"
+                 role="region" aria-label="Quote slider" aria-roledescription="carousel">
+
+              <!-- Sliding track -->
+              <div class="qs3-track-wrapper">
+                <div class="qs3-track" id="qs3Track">
+
+                  <!-- Slide 1 -->
+                  <div class="qs3-item" id="qs3-slide-0"
+                       role="group" aria-roledescription="slide" aria-label="Quote 1 of 3">
+                    <blockquote>
+                      &ldquo;Education is not the filling of a pail, but the lighting of a fire.&rdquo;
+                    </blockquote>
+                    <cite>William Butler Yeats, Poet &amp; Nobel Laureate</cite>
+                  </div>
+
+                  <!-- Slide 2 -->
+                  <div class="qs3-item" id="qs3-slide-1"
+                       role="group" aria-roledescription="slide" aria-label="Quote 2 of 3"
+                       aria-hidden="true">
+                    <blockquote>
+                      &ldquo;The roots of education are bitter, but the fruit is sweet.&rdquo;
+                    </blockquote>
+                    <cite>Aristotle, Greek Philosopher</cite>
+                  </div>
+
+                  <!-- Slide 3 -->
+                  <div class="qs3-item" id="qs3-slide-2"
+                       role="group" aria-roledescription="slide" aria-label="Quote 3 of 3"
+                       aria-hidden="true">
+                    <blockquote>
+                      &ldquo;A child who reads will be an adult who thinks.&rdquo;
+                    </blockquote>
+                    <cite>Anonymous</cite>
+                  </div>
+
+                </div><!-- /qs3-track -->
+              </div><!-- /qs3-track-wrapper -->
+
+              <!-- Controls -->
+              <div class="qs3-controls">
+                <button class="qs3-arrow" id="qs3Prev"
+                        aria-label="Previous quote" disabled>
+                  <i class="ri-arrow-left-s-line" aria-hidden="true"></i>
+                </button>
+                <div class="qs3-indicators" role="tablist" aria-label="Jump to quote">
+                  <button class="qs3-dot active" role="tab" aria-selected="true"
+                          aria-controls="qs3-slide-0" data-idx="0">01</button>
+                  <button class="qs3-dot" role="tab" aria-selected="false"
+                          aria-controls="qs3-slide-1" data-idx="1">02</button>
+                  <button class="qs3-dot" role="tab" aria-selected="false"
+                          aria-controls="qs3-slide-2" data-idx="2">03</button>
+                </div>
+                <button class="qs3-arrow" id="qs3Next"
+                        aria-label="Next quote">
+                  <i class="ri-arrow-right-s-line" aria-hidden="true"></i>
+                </button>
+              </div><!-- /qs3-controls -->
+
+            </div><!-- /quote-block q-style-3 -->
+
+
+            <!-- ══ COMMENT SECTION ══ -->
+            <div class="comment-section" id="comments">
+              <h2 class="comment-section-title">
+                <span aria-hidden="true"><i class="ri-chat-3-fill"></i></span>
+                Parent &amp; Community Comments <small style="font-size:0.75rem; font-weight:600; color:#ff407d; margin-left:6px;">4 Comments</small>
+              </h2>
+
+              <!-- Existing Comments -->
+              <div class="comments-list" aria-label="Comments">
+
+                <!-- Comment 1 -->
+                <div class="comment-item" role="article">
+                  <div class="commenter-avatar">NT</div>
+                  <div class="comment-content-wrap">
+                    <div class="comment-header">
+                      <strong>Nadia Thompson</strong>
+                      <span class="comment-role">Parent</span>
+                      <time datetime="2026-08-01">Aug 1, 2026</time>
+                    </div>
+                    <div class="comment-content">
+                      <p>This article about play-based learning is everything! My daughter started at Little Learners in January and the change in her confidence has been remarkable. She used to be so shy, and now she leads her little play group at home too. Thank you to the whole teaching team.</p>
+                    </div>
+                    <div class="comment-actions">
+                      <button class="comment-action-btn"><i class="ri-heart-line"></i> 12 Likes</button>
+                      <button class="comment-action-btn reply-trigger"><i class="ri-reply-line"></i> Reply</button>
+                    </div>
+                  </div>
+                </div>
+
+                <!-- Reply to Comment 1 -->
+                <div class="comment-item reply" role="article">
+                  <div class="commenter-avatar av-green">SR</div>
+                  <div class="comment-content-wrap">
+                    <div class="comment-header">
+                      <strong>Sarah Reynolds</strong>
+                      <span class="comment-role">Head Teacher</span>
+                      <time datetime="2026-08-02">Aug 2, 2026</time>
+                    </div>
+                    <div class="comment-content">
+                      <p>Nadia, this genuinely made our morning! Your daughter is such a curious and kind presence in our classroom. We're so proud of how far she's come. Thank you for trusting us with her early years.</p>
+                    </div>
+                    <div class="comment-actions">
+                      <button class="comment-action-btn"><i class="ri-heart-line"></i> 8 Likes</button>
+                    </div>
+                  </div>
+                </div>
+
+                <!-- Comment 2 -->
+                <div class="comment-item" role="article">
+                  <div class="commenter-avatar av-blue">RK</div>
+                  <div class="comment-content-wrap">
+                    <div class="comment-header">
+                      <strong>Rajan Kumar</strong>
+                      <span class="comment-role">Parent</span>
+                      <time datetime="2026-07-30">Jul 30, 2026</time>
+                    </div>
+                    <div class="comment-content">
+                      <p>Would love to see an article specifically about the phonics and reading curriculum. My son is in Junior KG and I'm trying to understand how to best support his literacy development at home alongside what you do at school. Brilliant blog overall though!</p>
+                    </div>
+                    <div class="comment-actions">
+                      <button class="comment-action-btn"><i class="ri-heart-line"></i> 7 Likes</button>
+                      <button class="comment-action-btn"><i class="ri-reply-line"></i> Reply</button>
+                    </div>
+                  </div>
+                </div>
+
+                <!-- Comment 3 -->
+                <div class="comment-item" role="article">
+                  <div class="commenter-avatar av-orange">ML</div>
+                  <div class="comment-content-wrap">
+                    <div class="comment-header">
+                      <strong>Maria Lopes</strong>
+                      <span class="comment-role">Parent</span>
+                      <time datetime="2026-07-27">Jul 27, 2026</time>
+                    </div>
+                    <div class="comment-content">
+                      <p>The nutrition blog post is exactly what we needed. We were struggling with picky eating at home, but since our twins started at Little Learners they try everything. Must be the peer influence! The lunch menus are fantastic.</p>
+                    </div>
+                    <div class="comment-actions">
+                      <button class="comment-action-btn"><i class="ri-heart-line"></i> 15 Likes</button>
+                      <button class="comment-action-btn"><i class="ri-reply-line"></i> Reply</button>
+                    </div>
+                  </div>
+                </div>
+
+              </div>
+
+              <!-- Comment Form -->
+              <div class="comment-form-wrap" data-aos>
+                <h3 class="comment-form-title"><i class="ri-pencil-line" style="color:#ff407d;"></i> Share Your Thoughts</h3>
+                <form class="comment-form" id="commentForm" novalidate>
+                  <div class="form-row-2">
+                    <div class="form-field">
+                      <label for="commentName">Your Name <span style="color:#ff407d;">*</span></label>
+                      <input type="text" id="commentName" placeholder="e.g. Sara Jenkins" required autocomplete="name">
+                    </div>
+                    <div class="form-field">
+                      <label for="commentEmail">Email Address <span style="color:#ff407d;">*</span></label>
+                      <input type="email" id="commentEmail" placeholder="sara@example.com" required autocomplete="email">
+                    </div>
+                  </div>
+                  <div class="form-row-2">
+                    <div class="form-field">
+                      <label for="commentRole">Your Role</label>
+                      <select id="commentRole">
+                        <option value="parent">Parent / Guardian</option>
+                        <option value="teacher">Educator</option>
+                        <option value="prospective">Prospective Parent</option>
+                        <option value="community">Community Member</option>
+                      </select>
+                    </div>
+                    <div class="form-field">
+                      <label for="commentPost">Commenting on</label>
+                      <select id="commentPost">
+                        <option value="general">General Post</option>
+                        <option value="playbased">Play-Based Learning Article</option>
+                        <option value="nutrition">Nutrition Article</option>
+                        <option value="literacy">Story Circles Article</option>
+                        <option value="outdoor">Outdoor Play Article</option>
+                      </select>
+                    </div>
+                  </div>
+                  <div class="form-field">
+                    <label>Rate this article</label>
+                    <div class="rating-row" id="ratingRow" role="radiogroup" aria-label="Rate this article">
+                      <span class="rating-star active" data-val="1" role="radio" aria-label="1 star" tabindex="0">&#9733;</span>
+                      <span class="rating-star active" data-val="2" role="radio" aria-label="2 stars" tabindex="0">&#9733;</span>
+                      <span class="rating-star active" data-val="3" role="radio" aria-label="3 stars" tabindex="0">&#9733;</span>
+                      <span class="rating-star active" data-val="4" role="radio" aria-label="4 stars" tabindex="0">&#9733;</span>
+                      <span class="rating-star" data-val="5" role="radio" aria-label="5 stars" tabindex="0">&#9733;</span>
+                    </div>
+                  </div>
+                  <div class="form-field">
+                    <label for="commentText">Your Comment <span style="color:#ff407d;">*</span></label>
+                    <textarea id="commentText" placeholder="Share your thoughts, experiences, or questions about early childhood education..." required></textarea>
+                  </div>
+                  <div style="display:flex; align-items:center; gap:12px; flex-wrap:wrap;">
+                    <label style="display:flex; align-items:center; gap:8px; font-size:0.85rem; color:var(--blog-mid); cursor:pointer;">
+                      <input type="checkbox" id="commentNotify" style="width:16px;height:16px;accent-color:#ff407d;"> Notify me of replies by email
+                    </label>
+                  </div>
+                  <div>
+                    <button type="submit" class="comment-submit-btn" id="commentSubmitBtn">
+                      Post Comment <i class="ri-send-plane-fill"></i>
+                    </button>
+                  </div>
+                </form>
+              </div>
+            </div><!-- /comment-section -->
+
+          </div><!-- /blog-articles -->
+
+          <!-- ══ RIGHT: Sidebar ══ -->
+          <aside class="blog-sidebar" aria-label="Blog sidebar">
+
+            <!-- Search -->
+            <div class="sidebar-card">
+              <h3 class="sidebar-card-title"><i class="ri-search-line"></i> Search Blog</h3>
+              <form style="display:flex; gap:8px;">
+                <input type="search" placeholder="Search articles..." style="flex:1; border:1.5px solid rgba(255,64,125,0.2); border-radius:10px; padding:10px 14px; font-size:0.88rem; font-family:'Nunito',sans-serif; outline:none; transition:border-color .25s;" onfocus="this.style.borderColor='#ff407d'" onblur="this.style.borderColor='rgba(255,64,125,0.2)'">
+                <button type="submit" style="width:42px;height:42px;border-radius:10px;background:linear-gradient(135deg,#ff407d,#ff2a6d);border:none;color:#fff;cursor:pointer;display:flex;align-items:center;justify-content:center;flex-shrink:0;font-size:1.1rem;"><i class="ri-search-line"></i></button>
+              </form>
+            </div>
+
+            <!-- Recent Posts -->
+            <div class="sidebar-card">
+              <h3 class="sidebar-card-title"><i class="ri-time-line"></i> Recent Posts</h3>
+              <div>
+                <div class="recent-post-item" tabindex="0" role="link" aria-label="Read: Play-Based Learning Article">
+                  <img class="recent-post-img" src="images/blog-hero.jpg" alt="Children in classroom craft activity">
+                  <div class="recent-post-info">
+                    <h4>How Play-Based Learning Builds Lifelong Confidence</h4>
+                    <span><i class="ri-calendar-line"></i> Aug 4, 2026</span>
+                  </div>
+                </div>
+                <div class="recent-post-item" tabindex="0" role="link" aria-label="Read: Art as Mindfulness Article">
+                  <img class="recent-post-img" src="images/blog-post2.jpg" alt="Child painting with watercolors">
+                  <div class="recent-post-info">
+                    <h4>Art as Mindfulness — Creative Expression Calms Young Minds</h4>
+                    <span><i class="ri-calendar-line"></i> Jul 2, 2026</span>
+                  </div>
+                </div>
+                <div class="recent-post-item" tabindex="0" role="link" aria-label="Read: Story Circles Article">
+                  <img class="recent-post-img" src="images/blog-post3.jpg" alt="Children in story circle">
+                  <div class="recent-post-info">
+                    <h4>Story Circles — Building Early Language &amp; Listening Skills</h4>
+                    <span><i class="ri-calendar-line"></i> Jul 18, 2026</span>
+                  </div>
+                </div>
+                <div class="recent-post-item" tabindex="0" role="link" aria-label="Read: Outdoor Play Article">
+                  <img class="recent-post-img" src="images/blog-post4.jpg" alt="Kids playing outdoors">
+                  <div class="recent-post-info">
+                    <h4>Outdoor Play Is Not a Break — It's Core Curriculum</h4>
+                    <span><i class="ri-calendar-line"></i> Jul 25, 2026</span>
+                  </div>
+                </div>
+                <div class="recent-post-item" tabindex="0" role="link" aria-label="Read: Nutrition Article">
+                  <img class="recent-post-img" src="images/blog-post5.jpg" alt="Children eating healthy lunch">
+                  <div class="recent-post-info">
+                    <h4>Feeding Growing Minds — Our Approach to Nutrition</h4>
+                    <span><i class="ri-calendar-line"></i> May 28, 2026</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Sidebar Quote -->
+            <div class="sidebar-quote">
+              <blockquote>
+                "The greatest gifts you can give your children are the roots of responsibility and the wings of independence."
+              </blockquote>
+              <cite>— Denis Waitley, Author &amp; Motivational Speaker</cite>
+            </div>
+
+            <!-- Categories -->
+            <div class="sidebar-card">
+              <h3 class="sidebar-card-title"><i class="ri-folder-line"></i> Categories</h3>
+              <ul class="cat-list">
+                <li><a href="#"><span><i class="ri-arrow-right-s-line"></i> Education</span><span class="cat-count">8</span></a></li>
+                <li><a href="#"><span><i class="ri-arrow-right-s-line"></i> Mindfulness</span><span class="cat-count">5</span></a></li>
+                <li><a href="#"><span><i class="ri-arrow-right-s-line"></i> Activities</span><span class="cat-count">7</span></a></li>
+                <li><a href="#"><span><i class="ri-arrow-right-s-line"></i> Nutrition</span><span class="cat-count">3</span></a></li>
+                <li><a href="#"><span><i class="ri-arrow-right-s-line"></i> Parenting</span><span class="cat-count">6</span></a></li>
+                <li><a href="#"><span><i class="ri-arrow-right-s-line"></i> Literacy</span><span class="cat-count">4</span></a></li>
+              </ul>
+            </div>
+
+            <!-- Tags -->
+            <div class="sidebar-card">
+              <h3 class="sidebar-card-title"><i class="ri-price-tag-3-line"></i> Popular Tags</h3>
+              <div class="tags-cloud">
+                <span class="tag-pill">Play-Based Learning</span>
+                <span class="tag-pill">Early Literacy</span>
+                <span class="tag-pill">Phonics</span>
+                <span class="tag-pill">STEM</span>
+                <span class="tag-pill">Mindfulness</span>
+                <span class="tag-pill">Outdoor Play</span>
+                <span class="tag-pill">Nutrition</span>
+                <span class="tag-pill">Parenting Tips</span>
+                <span class="tag-pill">Social Skills</span>
+                <span class="tag-pill">Story Time</span>
+                <span class="tag-pill">Art &amp; Craft</span>
+                <span class="tag-pill">School Readiness</span>
+              </div>
+            </div>
+
+            <!-- Newsletter -->
+            <div class="newsletter-sidebar">
+              <i class="ri-mail-heart-line"></i>
+              <h4>Get Weekly Insights</h4>
+              <p>Parent tips, new articles, and upcoming events — straight to your inbox, every week.</p>
+              <input type="email" placeholder="Your email address">
+              <button type="button">Subscribe Now</button>
+            </div>
+
+          </aside><!-- /blog-sidebar -->
+
+        </div><!-- /blog-layout -->
+
+      </div><!-- /container -->
+    </section>
+
+  </main>
+
+  <!-- ============ FOOTER ============ -->
+  <footer class="site-footer" id="footer">
+    <div class="c-ft-shape" aria-hidden="true">
+      <img src="images/our-program-shape1-1.png" alt="" class="cloud-shape-img">
+    </div>
+    <div class="container footer-grid">
+      <div class="footer-about" data-aos>
+        <div class="footer-brand">
+          <a href="index.html">
+            <img src="images/last-Photoroom.png" alt="Little Learners Kindergarten logo">
+          </a>
+        </div>
+        <p>A joyful, nurturing kindergarten helping every child build confidence, curiosity and a love of learning that lasts.</p>
+        <div class="footer-social">
+          <a href="#" aria-label="Instagram"><i class="ri-instagram-line"></i></a>
+          <a href="#" aria-label="Facebook"><i class="ri-facebook-fill"></i></a>
+          <a href="#" aria-label="YouTube"><i class="ri-youtube-fill"></i></a>
+          <a href="#" aria-label="LinkedIn"><i class="ri-linkedin-fill"></i></a>
+        </div>
+      </div>
+      <div class="footer-col" data-aos>
+        <h4>Quick Links</h4>
+        <ul>
+          <li><a href="index.html"><i class="ri-arrow-right-s-line"></i> Home</a></li>
+          <li><a href="about.html"><i class="ri-arrow-right-s-line"></i> About Us</a></li>
+          <li><a href="programs.html"><i class="ri-arrow-right-s-line"></i> Our Programs</a></li>
+          <li><a href="admissions.html"><i class="ri-arrow-right-s-line"></i> Admissions</a></li>
+          <li><a href="blog.html"><i class="ri-arrow-right-s-line"></i> Our Blog</a></li>
+        </ul>
+      </div>
+      <div class="footer-col" data-aos>
+        <h4>Blog Topics</h4>
+        <ul>
+          <li><a href="#"><i class="ri-arrow-right-s-line"></i> Education</a></li>
+          <li><a href="#"><i class="ri-arrow-right-s-line"></i> Mindfulness</a></li>
+          <li><a href="#"><i class="ri-arrow-right-s-line"></i> Outdoor Activities</a></li>
+          <li><a href="#"><i class="ri-arrow-right-s-line"></i> Nutrition</a></li>
+          <li><a href="#"><i class="ri-arrow-right-s-line"></i> Parenting Tips</a></li>
+        </ul>
+      </div>
+      <div class="footer-col" data-aos>
+        <h4>Contact Us</h4>
+        <ul class="footer-contact">
+          <li><i class="ri-phone-fill"></i><span>+1 123-456-7860</span></li>
+          <li><i class="ri-mail-fill"></i><span>info@littlelearners.com</span></li>
+          <li><i class="ri-map-pin-2-fill"></i><span>221 Sunflower Lane, Springfield</span></li>
+        </ul>
+        <button class="btn btn-primary btn-sm" style="margin-top:12px;">Book a Visit
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+        </button>
+      </div>
+    </div>
+    <div class="container footer-bottom">
+      <span>© 2026 Little Learners Kindergarten. All rights reserved.</span>
+      <span><a href="#">Privacy Policy</a> · <a href="#">Terms of Service</a></span>
+    </div>
+  </footer>
+
+  <button id="backToTop" aria-label="Back to top of page"><i class="ri-arrow-up-line"></i></button>
+
+  <script src="script.js"></script>
+
+  <script>
+    /* ── Blog Page Scripts ── */
+    (function () {
+      /* Filter Pills */
+      const filterBtns = document.querySelectorAll('.blog-filter-btn');
+      filterBtns.forEach(btn => {
+        btn.addEventListener('click', function () {
+          filterBtns.forEach(b => b.classList.remove('active'));
+          this.classList.add('active');
+        });
+      });
+
+      /* Star Rating */
+      const stars = document.querySelectorAll('.rating-star');
+      let currentRating = 4;
+      function setRating(val) {
+        currentRating = val;
+        stars.forEach(s => {
+          const v = parseInt(s.getAttribute('data-val'));
+          s.classList.toggle('active', v <= val);
+        });
+      }
+      stars.forEach(star => {
+        star.addEventListener('click', () => setRating(parseInt(star.getAttribute('data-val'))));
+        star.addEventListener('mouseover', () => stars.forEach(s => s.classList.toggle('active', parseInt(s.getAttribute('data-val')) <= parseInt(star.getAttribute('data-val')))));
+        star.addEventListener('mouseleave', () => setRating(currentRating));
+        star.addEventListener('keydown', (e) => { if(e.key === 'Enter' || e.key === ' ') setRating(parseInt(star.getAttribute('data-val'))); });
+      });
+
+      /* Comment Form */
+      const commentForm = document.getElementById('commentForm');
+      const submitBtn = document.getElementById('commentSubmitBtn');
+      if (commentForm) {
+        commentForm.addEventListener('submit', function (e) {
+          e.preventDefault();
+          const name = document.getElementById('commentName').value.trim();
+          const email = document.getElementById('commentEmail').value.trim();
+          const text = document.getElementById('commentText').value.trim();
+          if (!name || !email || !text) {
+            alert('Please fill in your name, email, and comment before posting.');
+            return;
+          }
+          const originalHTML = submitBtn.innerHTML;
+          submitBtn.innerHTML = 'Posting... <i class="ri-loader-4-line ri-spin"></i>';
+          submitBtn.disabled = true;
+          setTimeout(() => {
+            const commentsList = document.querySelector('.comments-list');
+            const newComment = document.createElement('div');
+            newComment.className = 'comment-item';
+            newComment.style.animation = 'none';
+            const initial = name.split(' ').map(w => w[0]).join('').toUpperCase().slice(0, 2);
+            const now = new Date().toLocaleDateString('en-US', { month: 'short', day: 'numeric', year: 'numeric' });
+            newComment.innerHTML = `
+              <div class="commenter-avatar" style="background:linear-gradient(135deg,#a78bfa,#7c3aed)">${initial}</div>
+              <div class="comment-content-wrap">
+                <div class="comment-header">
+                  <strong>${name}</strong>
+                  <span class="comment-role">Community Member</span>
+                  <time>${now}</time>
+                </div>
+                <div class="comment-content"><p>${text.replace(/</g,'&lt;').replace(/>/g,'&gt;')}</p></div>
+                <div class="comment-actions">
+                  <button class="comment-action-btn"><i class="ri-heart-line"></i> 0 Likes</button>
+                </div>
+              </div>`;
+            commentsList.appendChild(newComment);
+            commentForm.reset();
+            setRating(4);
+            submitBtn.innerHTML = originalHTML;
+            submitBtn.disabled = false;
+            newComment.scrollIntoView({ behavior: 'smooth', block: 'center' });
+          }, 900);
+        });
+      }
+
+      /* Scroll reveal for blog page elements */
+      const blogAos = document.querySelectorAll('[data-aos]');
+      if ('IntersectionObserver' in window) {
+        const io = new IntersectionObserver((entries) => {
+          entries.forEach((entry) => {
+            if (entry.isIntersecting) {
+              entry.target.classList.add('aos-in');
+              io.unobserve(entry.target);
+            }
+          });
+        }, { threshold: 0.12, rootMargin: '0px 0px -50px 0px' });
+        blogAos.forEach(el => io.observe(el));
+      } else {
+        blogAos.forEach(el => el.classList.add('aos-in'));
+      }
+
+      /* ── q-style-3 Slide Carousel Controller ── */
+      (function () {
+        var track  = document.getElementById('qs3Track');
+        if (!track) return;
+
+        var prev   = document.getElementById('qs3Prev');
+        var next   = document.getElementById('qs3Next');
+        var dots   = Array.from(document.querySelectorAll('.qs3-dot'));
+        var items  = Array.from(track.querySelectorAll('.qs3-item'));
+        var total  = items.length;
+        var cur    = 0;
+        var busy   = false;  /* prevent double-fire during 360ms transition */
+
+        function slideTo(idx) {
+          if (busy || idx === cur || idx < 0 || idx >= total) return;
+          busy = true;
+
+          /* Move the track */
+          track.style.transform = 'translateX(-' + (idx * 100) + '%)';
+
+          /* Update aria-hidden on items */
+          items.forEach(function (item, i) {
+            if (i === idx) { item.removeAttribute('aria-hidden'); }
+            else           { item.setAttribute('aria-hidden', 'true'); }
+          });
+
+          cur = idx;
+
+          /* Sync dots */
+          dots.forEach(function (d, i) {
+            var on = i === cur;
+            d.classList.toggle('active', on);
+            d.setAttribute('aria-selected', on ? 'true' : 'false');
+          });
+
+          /* Sync arrows */
+          prev.disabled = cur === 0;
+          next.disabled = cur === total - 1;
+
+          /* Release busy lock after transition completes */
+          setTimeout(function () { busy = false; }, 380);
+        }
+
+        /* Wire controls */
+        prev.addEventListener('click', function () { slideTo(cur - 1); });
+        next.addEventListener('click', function () { slideTo(cur + 1); });
+        dots.forEach(function (dot) {
+          dot.addEventListener('click', function () {
+            slideTo(parseInt(dot.getAttribute('data-idx'), 10));
+          });
+        });
+
+        /* Keyboard support when focus is inside the component */
+        track.closest('[role="region"]').addEventListener('keydown', function (e) {
+          if (e.key === 'ArrowRight') { e.preventDefault(); slideTo(cur + 1); }
+          if (e.key === 'ArrowLeft')  { e.preventDefault(); slideTo(cur - 1); }
+        });
+
+        /* Set initial aria state */
+        items.forEach(function (item, i) {
+          if (i !== 0) item.setAttribute('aria-hidden', 'true');
+        });
+        prev.disabled = true;
+      })();
+
+    })();
+  </script>
+</body>
+</html>
