@@ -1,0 +1,643 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Admissions - Little Learners Kindergarten</title>
+  <meta name="description" content="Welcome to Little Learners Kindergarten Admissions. Explore our simple 5-step application process, requirements, age groups, tuition information, and FAQs.">
+
+  <!-- Reticle Browser SDK -->
+  <script type="module" src="reticle-dev.js"></script>
+
+  <!-- GSAP & ScrollTrigger & Lenis CDN -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/lenis@1.1.18/dist/lenis.min.js"></script>
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@600;700;800&family=Nunito:wght@400;600;700;800&display=swap" rel="stylesheet">
+
+  <!-- Remix Icons -->
+  <link href="https://cdn.jsdelivr.net/npm/remixicon@3.5.0/fonts/remixicon.css" rel="stylesheet">
+
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <!-- CSS -->
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- Custom Cursor -->
+  <div class="custom-cursor" data-cursor></div>
+
+  <!-- ============ SITE HEADER / NAVIGATION ============ -->
+  <header class="site-header" id="siteHeader">
+    <nav class="navbar" aria-label="Primary Navigation">
+      <a href="index.html" class="brand">
+        <img src="images/last-Photoroom.png" alt="Little Learners Kindergarten logo">
+      </a>
+      <ul class="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About Us</a></li>
+        <li><a href="programs.html">Programs</a></li>
+        <li><a href="admissions.html" class="active">Admissions</a></li>
+        <li><a href="blog.html">Blog</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+      <div class="nav-actions">
+        <div class="search-wrap">
+          <form action="https://www.google.com/search" class="search" id="search-bar">
+            <input type="search" placeholder="Say something..." name="q" class="search__input" aria-label="Search site" data-testid="search-input">
+            <button type="button" class="search__button" id="search-button" aria-label="Open search" data-testid="search-button">
+              <i class="ri-search-2-line search__icon"></i>
+              <i class="ri-close-line search__close"></i>
+            </button>
+          </form>
+        </div>
+        <button class="burger" id="burgerBtn" aria-label="Open menu" aria-expanded="false" aria-controls="mobileNav" data-testid="burger-btn">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="18" x2="21" y2="18"/></svg>
+        </button>
+      </div>
+    </nav>
+  </header>
+
+  <!-- ============ MOBILE NAV ============ -->
+  <div class="mobile-nav" id="mobileNav">
+    <div class="mobile-nav-top">
+      <a href="index.html" class="brand">
+        <img src="images/last-Photoroom.png" alt="Little Learners Kindergarten logo">
+      </a>
+      <button class="icon-btn" id="closeBurger" aria-label="Close menu">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
+      </button>
+    </div>
+    <a href="index.html">Home</a>
+    <a href="about.html">About Us</a>
+    <a href="programs.html">Programs</a>
+    <a href="admissions.html" class="active">Admissions</a>
+    <a href="blog.html">Blog</a>
+    <a href="contact.html">Contact</a>
+  </div>
+
+  <main id="top">
+
+    <!-- ============ PAGE SUBHEADER HERO ============ -->
+    <section class="page-subheader-hero" aria-label="Admissions Header">
+      <img src="images/sun.png" alt="" class="hero-doodle doodle-left" aria-hidden="true">
+      <img src="images/banner-shape7.png" alt="" class="hero-doodle doodle-right" aria-hidden="true">
+
+      <div class="container" data-aos>
+        <h1>Admissions</h1>
+        <nav class="page-breadcrumb" aria-label="Breadcrumb">
+          <a href="index.html"><i class="ri-home-4-line"></i> Home</a>
+          <i class="ri-arrow-right-s-line sep"></i>
+          <span>Admissions</span>
+        </nav>
+      </div>
+
+      <!-- Scalloped / Cloud Bottom Wave -->
+      <div class="cloud-wave-bottom" aria-hidden="true">
+        <svg viewBox="0 0 1200 120" preserveAspectRatio="none">
+          <path d="M0,0 C150,90 350,-40 500,40 C650,110 900,-20 1200,50 L1200,120 L0,120 Z"></path>
+        </svg>
+      </div>
+    </section>
+
+    <!-- ============ 1. WELCOME INTRODUCTION ============ -->
+    <section class="admission-intro-section" aria-label="Welcome to Admissions">
+      <div class="container">
+        <div class="intro-card-box" data-aos>
+          <span class="eyebrow orange eyebrow-intro-badge"><i class="ri-heart-3-fill"></i> Welcome Prospective Families</span>
+          <h3>Your Child's Happy Learning Journey Begins Here</h3>
+          <p>At Little Learners Kindergarten, we strive to make our admissions experience warm, transparent, and stress-free for parents. We welcome children into a nurturing environment designed to foster curiosity, character, and lifelong confidence.</p>
+          <button class="btn btn-primary" id="openTourModalBtn3">
+            Schedule a Guided School Visit
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+          </button>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ 2. PROGRAM OVERVIEW TAILWIND STICKY GRADIENT SLIDES ============ -->
+    <div class="relative">
+      <!-- Slide 1: Playgroup -->
+      <div class="sticky top-0 h-screen flex flex-col items-center justify-center bg-slate-950 text-white px-6 text-center relative overflow-hidden">
+        <img src="images/todler.jpg" alt="Playgroup" class="absolute inset-0 w-full h-full object-cover opacity-75 pointer-events-none">
+        <div class="absolute inset-0 bg-gradient-to-b from-rose-950/80 via-slate-950/65 to-slate-950/90 pointer-events-none"></div>
+        <div class="relative z-10 max-w-3xl flex flex-col items-center">
+          <span class="px-5 py-1.5 rounded-full bg-rose-500/20 backdrop-blur-md text-rose-300 font-bold text-sm mb-4 border border-emerald-400/30">Step 1 • Toddler Playgroup</span>
+          <h2 class="text-4xl md:text-6xl font-black mb-3 tracking-tight text-white">Toddler Sensory &amp; Gentle Discovery</h2>
+          <p class="mt-2 text-lg md:text-xl text-slate-200 font-semibold max-w-xl mb-6 leading-relaxed">1.5 - 2.5 Years • Building emotional security, social warmth, and playful exploration in a loving haven.</p>
+          <a href="programs.html" class="btn btn-primary sticky-card-btn">
+            Explore Playgroup
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+          </a>
+        </div>
+      </div>
+
+      <!-- Slide 2: Nursery -->
+      <div class="sticky top-0 h-screen flex flex-col items-center justify-center bg-slate-950 text-white px-6 text-center relative overflow-hidden">
+        <img src="images/preschool.jpg" alt="Nursery" class="absolute inset-0 w-full h-full object-cover opacity-75 pointer-events-none">
+        <div class="absolute inset-0 bg-gradient-to-b from-rose-950/80 via-slate-950/65 to-slate-950/90 pointer-events-none"></div>
+        <div class="relative z-10 max-w-3xl flex flex-col items-center">
+          <span class="px-5 py-1.5 rounded-full bg-rose-500/20 backdrop-blur-md text-rose-300 font-bold text-sm mb-4 border border-rose-400/30">Step 2 • Preschool &amp; Nursery</span>
+          <h2 class="text-4xl md:text-6xl font-black mb-3 tracking-tight text-white">Phonics, Music &amp; Creative Rhymes</h2>
+          <p class="mt-2 text-lg md:text-xl text-rose-100 font-semibold max-w-xl mb-6 leading-relaxed">2.5 - 3.5 Years • Early literacy, friendship circles, rhythmic expression, and daily creative excitement.</p>
+          <a href="programs.html" class="btn btn-primary sticky-card-btn">
+            Explore Nursery
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+          </a>
+        </div>
+      </div>
+
+      <!-- Slide 3: Junior KG -->
+      <div class="sticky top-0 h-screen flex flex-col items-center justify-center bg-slate-950 text-white px-6 text-center relative overflow-hidden">
+        <img src="images/abt.jpg" alt="Junior KG" class="absolute inset-0 w-full h-full object-cover opacity-75 pointer-events-none">
+        <div class="absolute inset-0 bg-gradient-to-b from-rose-950/80 via-pink-950/65 to-slate-950/90 pointer-events-none"></div>
+        <div class="relative z-10 max-w-3xl flex flex-col items-center">
+          <span class="px-5 py-1.5 rounded-full bg-rose-500/20 backdrop-blur-md text-rose-300 font-bold text-sm mb-4 border border-pink-400/30">Step 3 • Junior KG</span>
+          <h2 class="text-4xl md:text-6xl font-black mb-3 tracking-tight text-white">Math Logic &amp; Science Curiosity</h2>
+          <p class="mt-2 text-lg md:text-xl text-pink-100 font-semibold max-w-xl mb-6 leading-relaxed">3.5 - 4.5 Years • Hands-on STEM exploration, guided storytelling, early numeracy, and logic puzzles.</p>
+          <a href="programs.html" class="btn btn-primary sticky-card-btn">
+            Explore Junior KG
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+          </a>
+        </div>
+      </div>
+
+      <!-- Slide 4: Senior KG -->
+      <div class="sticky top-0 h-screen flex flex-col items-center justify-center bg-slate-950 text-white px-6 text-center relative overflow-hidden">
+        <img src="images/pre-k.jpg" alt="Senior KG" class="absolute inset-0 w-full h-full object-cover opacity-75 pointer-events-none">
+        <div class="absolute inset-0 bg-gradient-to-b from-rose-950/80 via-slate-950/65 to-slate-950/90 pointer-events-none"></div>
+        <div class="relative z-10 max-w-3xl flex flex-col items-center">
+          <span class="px-5 py-1.5 rounded-full bg-rose-500/20 backdrop-blur-md text-rose-300 font-bold text-sm mb-4 border border-blue-400/30">Step 4 • Senior KG</span>
+          <h2 class="text-4xl md:text-6xl font-black mb-3 tracking-tight text-white">Elementary Readiness &amp; Leadership</h2>
+          <p class="mt-2 text-lg md:text-xl text-slate-200 font-semibold max-w-xl mb-6 leading-relaxed">4.5 - 5.5 Years • Confident reading, writing, teamwork, school honors, and elementary transition.</p>
+          <a href="programs.html" class="btn btn-primary sticky-card-btn">
+            Explore Senior KG
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+          </a>
+        </div>
+      </div>
+
+      <!-- Slide 5: Campus Life -->
+      <div class="sticky top-0 h-screen flex flex-col items-center justify-center bg-slate-950 text-white px-6 text-center relative overflow-hidden">
+        <img src="images/eme-kindergarten-421623_1920.jpg" alt="Campus Life" class="absolute inset-0 w-full h-full object-cover opacity-75 pointer-events-none">
+        <div class="absolute inset-0 bg-gradient-to-b from-rose-950/80 via-slate-950/65 to-slate-950/90 pointer-events-none"></div>
+        <div class="relative z-10 max-w-3xl flex flex-col items-center">
+          <span class="px-5 py-1.5 rounded-full bg-rose-500/20 backdrop-blur-md text-rose-300 font-bold text-sm mb-4 border border-rose-400/30">Overview • Little Learners</span>
+          <h2 class="text-4xl md:text-6xl font-black mb-3 tracking-tight text-white">Joyful Learning Every Single Day</h2>
+          <p class="mt-2 text-lg md:text-xl text-slate-200 font-semibold max-w-xl mb-6 leading-relaxed">Safe, encouraging &amp; inspiring space for your child to bloom, thrive, and make lifelong friends.</p>
+          <button class="btn btn-primary sticky-card-btn open-program-modal-btn">
+            Apply for Admission
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <!-- ============ 3. WHY CHOOSE OUR KINDERGARTEN ============ -->
+    <section class="admission-why-section" aria-label="Why Choose Us">
+      <div class="container">
+        <div class="section-head text-center" data-aos>
+          <span class="eyebrow purple"><i class="ri-sparkles-line"></i> Why Choose Us</span>
+          <h2>A Place Where Every Child Thrives</h2>
+          <p class="section-desc">We combine empathetic emotional care with a proven play-based curriculum to give young learners a joyful start.</p>
+        </div>
+
+        <div class="why-choose-grid" data-aos>
+          <div class="why-card">
+            <div class="why-icon icon-pink"><i class="ri-shield-check-line"></i></div>
+            <h4>Safe Learning Environment</h4>
+            <p>Childproof facilities, monitored entryways, and strict health and hygiene standards ensure peace of mind.</p>
+          </div>
+          <div class="why-card">
+            <div class="why-icon icon-purple"><i class="ri-award-line"></i></div>
+            <h4>Experienced Teachers</h4>
+            <p>Certified early educators dedicated to nurturing milestones, emotional security, and positive reinforcement.</p>
+          </div>
+          <div class="why-card">
+            <div class="why-icon icon-orange"><i class="ri-gamepad-line"></i></div>
+            <h4>Play-Based Learning</h4>
+            <p>Structured fun, storytelling, and sensory discovery that turn natural curiosity into core academic readiness.</p>
+          </div>
+          <div class="why-card">
+            <div class="why-icon icon-orange"><i class="ri-team-line"></i></div>
+            <h4>Small Class Sizes</h4>
+            <p>Low child-to-teacher ratio (6:1 average) ensuring personalized attention and meaningful social interaction.</p>
+          </div>
+          <div class="why-card">
+            <div class="why-icon icon-pink"><i class="ri-palette-line"></i></div>
+            <h4>Creative Activities</h4>
+            <p>Daily art, music, outdoor play, clay modeling, and hands-on STEM exploration that ignite imagination.</p>
+          </div>
+          <div class="why-card">
+            <div class="why-icon icon-purple"><i class="ri-user-heart-line"></i></div>
+            <h4>Parent Partnership</h4>
+            <p>Regular progress updates, open communication, and active family involvement throughout the school year.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ 4. ADMISSION PROCESS ============ -->
+    <section class="admission-process-section" aria-label="Admission Steps">
+      <div class="container">
+        <div class="section-head text-center" data-aos>
+          <span class="eyebrow orange"><i class="ri-route-line"></i> Step-by-Step Pathway</span>
+          <h2>Our Simple 5-Step Admission Process</h2>
+          <p class="section-desc">Follow our clear, stress-free pathway from your initial inquiry to your child's first exciting day of school.</p>
+        </div>
+
+        <div class="process-steps-grid" data-aos>
+          <div class="process-step-card">
+            <div class="step-number-pill">1</div>
+            <h4>Submit Inquiry</h4>
+            <p>Fill out our simple online form or call our admissions desk to express your interest.</p>
+          </div>
+          <div class="process-step-card">
+            <div class="step-number-pill">2</div>
+            <h4>Schedule School Visit</h4>
+            <p>Book a personal campus tour to explore our classrooms and meet our teaching team.</p>
+          </div>
+          <div class="process-step-card">
+            <div class="step-number-pill">3</div>
+            <h4>Meet the Teachers</h4>
+            <p>An informal, friendly interaction for your child to feel comfortable and welcomed.</p>
+          </div>
+          <div class="process-step-card">
+            <div class="step-number-pill">4</div>
+            <h4>Complete Registration</h4>
+            <p>Submit required documents and finalize the registration paperwork.</p>
+          </div>
+          <div class="process-step-card">
+            <div class="step-number-pill">5</div>
+            <h4>Welcome to Our Family</h4>
+            <p>Receive your orientation pack and prepare for a joyful, memorable first day!</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ 5. ADMISSION REQUIREMENTS ============ -->
+    <section class="admission-req-section" aria-label="Admission Documents & Requirements">
+      <div class="container">
+        <div class="section-head text-center" data-aos>
+          <span class="eyebrow purple"><i class="ri-file-list-3-line"></i> Documentation</span>
+          <h2>Admission Requirements Checklist</h2>
+          <p class="section-desc">Please keep the following standard documents ready for a seamless enrollment experience.</p>
+        </div>
+
+        <div class="req-checklist-grid" data-aos>
+          <div class="req-card">
+            <div class="req-check-icon"><i class="ri-checkbox-circle-fill"></i></div>
+            <div class="req-info">
+              <h4>Child's Birth Certificate</h4>
+              <p>Official birth certificate copy for age verification and school record.</p>
+            </div>
+          </div>
+          <div class="req-card">
+            <div class="req-check-icon"><i class="ri-checkbox-circle-fill"></i></div>
+            <div class="req-info">
+              <h4>Passport-size Photographs</h4>
+              <p>4 recent passport-size color photographs of your child.</p>
+            </div>
+          </div>
+          <div class="req-card">
+            <div class="req-check-icon"><i class="ri-checkbox-circle-fill"></i></div>
+            <div class="req-info">
+              <h4>Parent / Guardian ID</h4>
+              <p>Copy of government-issued photo ID (Passport / Driver's License) of parents.</p>
+            </div>
+          </div>
+          <div class="req-card">
+            <div class="req-check-icon"><i class="ri-checkbox-circle-fill"></i></div>
+            <div class="req-info">
+              <h4>Medical Records</h4>
+              <p>Updated immunization record and emergency medical contact information.</p>
+            </div>
+          </div>
+          <div class="req-card">
+            <div class="req-check-icon"><i class="ri-checkbox-circle-fill"></i></div>
+            <div class="req-info">
+              <h4>Previous School Record</h4>
+              <p>Transfer certificate or progress card (if transferring from another kindergarten).</p>
+            </div>
+          </div>
+          <div class="req-card">
+            <div class="req-check-icon"><i class="ri-checkbox-circle-fill"></i></div>
+            <div class="req-info">
+              <h4>Signed Application Form</h4>
+              <p>Completed enrollment agreement with emergency contact preferences.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ 6. AGE GROUPS ============ -->
+    <section class="admission-age-section" aria-label="Age Categories">
+      <div class="container">
+        <div class="section-head text-center" data-aos>
+          <span class="eyebrow orange"><i class="ri-user-smile-line"></i> Age Categories</span>
+          <h2>Our Learning Divisions</h2>
+          <p class="section-desc">Thoughtfully designed age categories that match the developmental milestones of early childhood.</p>
+        </div>
+
+        <div class="age-groups-grid" data-aos>
+          <div class="age-group-card">
+            <span class="age-group-badge">1.5 - 2.5 Years</span>
+            <h4>Playgroup</h4>
+            <p>Gentle routines, sensory discovery, motor skill exercises, and compassionate care helping toddlers build security.</p>
+          </div>
+          <div class="age-group-card">
+            <span class="age-group-badge">2.5 - 3.5 Years</span>
+            <h4>Nursery</h4>
+            <p>Early vocabulary, phonics rhymes, block building, creative art, and social friendship building with peers.</p>
+          </div>
+          <div class="age-group-card">
+            <span class="age-group-badge">3.5 - 4.5 Years</span>
+            <h4>Junior KG</h4>
+            <p>Structured reading readiness, early math logic, guided play, science curiosity, and group storytelling.</p>
+          </div>
+          <div class="age-group-card">
+            <span class="age-group-badge">4.5 - 5.5 Years</span>
+            <h4>Senior KG</h4>
+            <p>Elementary school readiness, advanced literacy, collaborative inquiry projects, leadership, and graduation honor.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ 7. TUITION & FEES ============ -->
+    <section class="admission-tuition-section" aria-label="Tuition & Fees">
+      <div class="container">
+        <div class="section-head text-center" data-aos>
+          <span class="eyebrow purple"><i class="ri-money-dollar-circle-line"></i> Fee Structure</span>
+          <h2>Tuition &amp; Fee Overview</h2>
+          <p class="section-desc">Our inclusive tuition covers learning materials, organic snacks, and all daily creative clubs.</p>
+        </div>
+
+        <div class="tuition-box" data-aos>
+          <table class="tuition-table" aria-label="Fee schedule table">
+            <thead>
+              <tr>
+                <th>Program Division</th>
+                <th>Age Range</th>
+                <th>Daily Schedule</th>
+                <th>Fee Details</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td><strong>Playgroup</strong></td>
+                <td>1.5 - 2.5 Years</td>
+                <td>Mon - Fri (8:30am - 11:30am)</td>
+                <td>₹2,500 / Month</td>
+              </tr>
+              <tr>
+                <td><strong>Nursery</strong></td>
+                <td>2.5 - 3.5 Years</td>
+                <td>Mon - Fri (8:30am - 12:30pm)</td>
+                <td>₹2,800 / Month</td>
+              </tr>
+              <tr>
+                <td><strong>Junior KG</strong></td>
+                <td>3.5 - 4.5 Years</td>
+                <td>Mon - Fri (8:30am - 2:00pm)</td>
+                <td>₹3,200 / Month</td>
+              </tr>
+              <tr>
+                <td><strong>Senior KG</strong></td>
+                <td>4.5 - 5.5 Years</td>
+                <td>Mon - Fri (8:00am - 3:00pm)</td>
+                <td>₹3,500 / Month</td>
+              </tr>
+            </tbody>
+          </table>
+
+          <div class="tuition-note-box">
+            <i class="ri-information-fill tuition-note-icon"></i>
+            <span><strong>Information Note for Parents:</strong> Detailed fee breakdowns, customized installment plans, and sibling discounts are provided during your guided school tour. Please contact our admissions desk for complete details.</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ 8. FAQ ============ -->
+    <div class="cloud-shape-divider cloud-shape-divider-white" aria-hidden="true">
+      <img src="images/our-program-shape1-1.png" alt="" class="cloud-shape-img-full">
+    </div>
+    <section class="faq-section faq-section-white" aria-label="Admission FAQs">
+      <div class="container">
+        <div class="section-head text-center" data-aos>
+          <span class="eyebrow orange"><i class="ri-question-line"></i> Questions</span>
+          <h2>Frequently Asked Admission Questions</h2>
+          <p class="section-desc">Find quick answers to common questions about admissions, school visits, and entry ages.</p>
+        </div>
+
+        <div class="faq-wrapper" data-aos>
+          <div class="faq-item active">
+            <button class="faq-trigger" aria-expanded="true">
+              <span>When does registration for the upcoming school year open?</span>
+              <i class="ri-add-line faq-icon"></i>
+            </button>
+            <div class="faq-content">
+              <p>Admissions open annually in October for the main academic session. However, we also process mid-term applications whenever seats become available in specific age categories.</p>
+            </div>
+          </div>
+
+          <div class="faq-item">
+            <button class="faq-trigger" aria-expanded="false">
+              <span>Can I schedule a school tour before submitting an application?</span>
+              <i class="ri-add-line faq-icon"></i>
+            </button>
+            <div class="faq-content">
+              <p>Yes, we strongly encourage all prospective families to visit us! You can easily schedule a guided tour by clicking the "Schedule Tour" button on this page.</p>
+            </div>
+          </div>
+
+          <div class="faq-item">
+            <button class="faq-trigger" aria-expanded="false">
+              <span>What is the student-to-teacher ratio in classrooms?</span>
+              <i class="ri-add-line faq-icon"></i>
+            </button>
+            <div class="faq-content">
+              <p>We maintain an average child-to-teacher ratio of 6:1 in Toddler and Nursery rooms, and 8:1 in Pre-K and Kindergarten rooms to ensure individual care and personal attention.</p>
+            </div>
+          </div>
+
+          <div class="faq-item">
+            <button class="faq-trigger" aria-expanded="false">
+              <span>Do you offer school bus transportation?</span>
+              <i class="ri-add-line faq-icon"></i>
+            </button>
+            <div class="faq-content">
+              <p>Yes, we operate GPS-tracked, air-conditioned school buses with trained female attendants covering primary residential neighborhoods.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ============ FOOTER ============ -->
+  <footer class="site-footer" id="footer">
+    <div class="c-ft-shape" aria-hidden="true">
+      <img src="images/banner-shape2-1.png" alt="" class="cloud-shape-img">
+    </div>
+
+    <div class="container footer-grid">
+      <div class="footer-about" data-aos>
+        <div class="footer-brand">
+          <a href="index.html">
+            <img src="images/last-Photoroom.png" alt="Little Learners Kindergarten logo">
+          </a>
+        </div>
+        <p>A joyful, nurturing kindergarten helping every child build confidence, curiosity and a love of learning that lasts.</p>
+        <div class="footer-social">
+          <a href="#" aria-label="Instagram"><i class="ri-instagram-line"></i></a>
+          <a href="#" aria-label="Facebook"><i class="ri-facebook-fill"></i></a>
+          <a href="#" aria-label="YouTube"><i class="ri-youtube-fill"></i></a>
+          <a href="#" aria-label="LinkedIn"><i class="ri-linkedin-fill"></i></a>
+        </div>
+      </div>
+      <div class="footer-col" data-aos>
+        <h4>Quick Links</h4>
+        <ul>
+          <li><a href="index.html"><i class="ri-arrow-right-s-line"></i> Home</a></li>
+          <li><a href="about.html"><i class="ri-arrow-right-s-line"></i> About Us</a></li>
+          <li><a href="programs.html"><i class="ri-arrow-right-s-line"></i> Our Programs</a></li>
+          <li><a href="admissions.html"><i class="ri-arrow-right-s-line"></i> Admissions</a></li>
+          <li><a href="blog.html"><i class="ri-arrow-right-s-line"></i> Our Blog</a></li>
+        </ul>
+      </div>
+      <div class="footer-col" data-aos>
+        <h4>Programs</h4>
+        <ul>
+          <li><a href="programs.html"><i class="ri-arrow-right-s-line"></i> Toddler Playgroup</a></li>
+          <li><a href="programs.html"><i class="ri-arrow-right-s-line"></i> Preschool &amp; Nursery</a></li>
+          <li><a href="programs.html"><i class="ri-arrow-right-s-line"></i> Junior KG</a></li>
+          <li><a href="programs.html"><i class="ri-arrow-right-s-line"></i> Senior KG</a></li>
+        </ul>
+      </div>
+      <div class="footer-col" data-aos>
+        <h4>Contact Us</h4>
+        <ul class="footer-contact">
+          <li>
+            <i class="ri-phone-fill"></i>
+            <span>+1 123-456-7860</span>
+          </li>
+          <li>
+            <i class="ri-mail-fill"></i>
+            <span>info@littlelearners.com</span>
+          </li>
+          <li>
+            <i class="ri-map-pin-2-fill"></i>
+            <span>221 Sunflower Lane, Springfield</span>
+          </li>
+        </ul>
+        <button class="btn btn-primary btn-sm open-program-modal-btn" style="margin-top: 10px;">Book a Visit
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+        </button>
+      </div>
+    </div>
+    <div class="container footer-bottom">
+      <span>© 2026 Little Learners Kindergarten. All rights reserved.</span>
+      <span><a href="#">Privacy Policy</a> · <a href="#">Terms of Service</a></span>
+    </div>
+  </footer>
+
+  <!-- ============ MODALS ============ -->
+  <!-- Tour Modal -->
+  <div class="modal-overlay" id="tourModal" aria-hidden="true" data-testid="lightbox-modal">
+    <div class="modal-card">
+      <button class="modal-close" id="closeTourModalBtn" aria-label="Close modal"><i class="ri-close-line"></i></button>
+      <div class="modal-header">
+        <span class="eyebrow orange"><i class="ri-calendar-event-fill"></i> Guided Campus Visit</span>
+        <h3>Schedule a Campus Tour</h3>
+        <p>Choose a date that works best for your family to visit our classrooms.</p>
+      </div>
+      <form class="modal-form" id="tourScheduleForm" data-testid="tour-form">
+        <div class="form-group">
+          <label for="parentName">Parent's Full Name</label>
+          <input type="text" id="parentName" placeholder="e.g. Sarah Jenkins" required>
+        </div>
+        <div class="form-row">
+          <div class="form-group">
+            <label for="parentEmail">Email Address</label>
+            <input type="email" id="parentEmail" placeholder="sarah@example.com" required>
+          </div>
+          <div class="form-group">
+            <label for="parentPhone">Phone Number</label>
+            <input type="tel" id="parentPhone" placeholder="(555) 000-0000" required>
+          </div>
+        </div>
+        <div class="form-row">
+          <div class="form-group">
+            <label for="preferredDate">Preferred Date</label>
+            <input type="date" id="preferredDate" required>
+          </div>
+          <div class="form-group">
+            <label for="childAgeGroup">Child's Age Group</label>
+            <select id="childAgeGroup">
+              <option value="playgroup">Playgroup (1.5-2.5 yrs)</option>
+              <option value="nursery">Nursery (2.5-3.5 yrs)</option>
+              <option value="juniorkg">Junior KG (3.5-4.5 yrs)</option>
+              <option value="seniorkg">Senior KG (4.5-5.5 yrs)</option>
+            </select>
+          </div>
+        </div>
+        <button type="submit" class="btn btn-primary btn-block">Confirm Tour Booking <i class="ri-arrow-right-line"></i></button>
+      </form>
+    </div>
+  </div>
+
+  <!-- Program Modal -->
+  <div class="modal-overlay" id="programModal" aria-hidden="true">
+    <div class="modal-card">
+      <button class="modal-close" id="closeProgramModalBtn" aria-label="Close modal"><i class="ri-close-line"></i></button>
+      <div class="modal-header">
+        <span class="eyebrow orange"><i class="ri-bookmark-3-fill"></i> Application Form</span>
+        <h3 id="programModalTitle">Apply for Admission</h3>
+        <p>Complete this quick application form to start your child's enrollment.</p>
+      </div>
+      <form class="modal-form" id="programEnrollForm" data-testid="program-form">
+        <div class="form-group">
+          <label for="progParentName">Parent Name</label>
+          <input type="text" id="progParentName" placeholder="Your Name" required>
+        </div>
+        <div class="form-group">
+          <label for="progChildName">Child's Name</label>
+          <input type="text" id="progChildName" placeholder="Child's Name" required>
+        </div>
+        <div class="form-row">
+          <div class="form-group">
+            <label for="progSelect">Select Program</label>
+            <select id="progSelect">
+              <option value="Playgroup">Playgroup (1.5 - 2.5 Yrs)</option>
+              <option value="Nursery">Nursery (2.5 - 3.5 Yrs)</option>
+              <option value="Junior KG">Junior KG (3.5 - 4.5 Yrs)</option>
+              <option value="Senior KG">Senior KG (4.5 - 5.5 Yrs)</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label for="progPhone">Phone Number</label>
+            <input type="tel" id="progPhone" placeholder="(555) 000-0000" required>
+          </div>
+        </div>
+        <button type="submit" class="btn btn-primary btn-block">Submit Application <i class="ri-arrow-right-line"></i></button>
+      </form>
+    </div>
+  </div>
+
+  <button id="backToTop" aria-label="Back to top of page"><i class="ri-arrow-up-line"></i></button>
+  <script src="script.js"></script>
+
+ 
+</body>
+</html>
