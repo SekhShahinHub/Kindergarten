@@ -236,7 +236,7 @@
       ripple.style.left = (e.clientX - rect.left - size/2) + 'px';
       ripple.style.top = (e.clientY - rect.top - size/2) + 'px';
       btn.appendChild(ripple);
-      setTimeout(function(){ ripple.remove(); }, 650);
+      setTimeout(function(){ ripple.remove(); }, 280);
     });
   });
 
