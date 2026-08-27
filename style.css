@@ -278,7 +278,7 @@ a:focus-visible, button:focus-visible, input:focus-visible{
 .brand img{
   display:block;
   width:auto;
-  max-width:260px;
+  max-width:290px;
   max-height:84px;
   height:auto;
   object-fit:contain;
