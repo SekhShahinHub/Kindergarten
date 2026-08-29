@@ -473,31 +473,67 @@ document.addEventListener('DOMContentLoaded', function() {
   /* 1. Facility Gallery Filter Tabs */
   const filterTabs = document.querySelectorAll('.filter-tab');
   const galleryItems = document.querySelectorAll('.gallery-item');
+  let galleryTimer = null;
 
   if (filterTabs.length && galleryItems.length) {
     filterTabs.forEach(tab => {
       tab.addEventListener('click', function() {
+        if (this.classList.contains('active')) return;
+
         filterTabs.forEach(t => t.classList.remove('active'));
         this.classList.add('active');
 
         const filterValue = this.getAttribute('data-filter');
 
+        if (galleryTimer) clearTimeout(galleryTimer);
+
+        const itemsToHide = [];
+        const itemsToShow = [];
+
         galleryItems.forEach(item => {
           const category = item.getAttribute('data-category');
-          if (filterValue === 'all' || category === filterValue) {
-            item.style.display = 'block';
-            setTimeout(() => {
-              item.style.opacity = '1';
-              item.style.transform = 'scale(1)';
-            }, 50);
-          } else {
+          const isMatch = (filterValue === 'all' || category === filterValue);
+          const isVisible = (window.getComputedStyle(item).display !== 'none');
+
+          if (!isMatch && isVisible) {
+            itemsToHide.push(item);
             item.style.opacity = '0';
-            item.style.transform = 'scale(0.9)';
-            setTimeout(() => {
-              item.style.display = 'none';
-            }, 250);
+            item.style.transform = 'scale(0.94)';
+            item.style.transition = 'opacity 0.12s var(--ease), transform 0.12s var(--ease)';
+          } else if (isMatch && !isVisible) {
+            itemsToShow.push(item);
+          } else if (isMatch && isVisible) {
+            item.style.opacity = '1';
+            item.style.transform = 'scale(1)';
+            item.style.transition = 'opacity 0.18s var(--ease), transform 0.18s var(--ease)';
           }
         });
+
+        const delay = itemsToHide.length ? 120 : 0;
+
+        galleryTimer = setTimeout(() => {
+          itemsToHide.forEach(item => {
+            item.style.display = 'none';
+          });
+
+          itemsToShow.forEach(item => {
+            item.style.display = 'block';
+            item.style.opacity = '0';
+            item.style.transform = 'scale(0.94)';
+            item.style.transition = 'opacity 0.18s var(--ease), transform 0.18s var(--ease)';
+          });
+
+          if (itemsToShow.length) {
+            requestAnimationFrame(() => {
+              requestAnimationFrame(() => {
+                itemsToShow.forEach(item => {
+                  item.style.opacity = '1';
+                  item.style.transform = 'scale(1)';
+                });
+              });
+            });
+          }
+        }, delay);
       });
     });
   }
