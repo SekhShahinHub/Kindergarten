@@ -2478,12 +2478,14 @@ a:focus-visible, button:focus-visible, input:focus-visible{
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 24px;
+  align-items: start;
 }
 .gallery-item {
   border-radius: var(--radius-md);
   overflow: hidden;
   box-shadow: var(--shadow-card);
-  transition: transform 0.3s ease, opacity 0.3s ease;
+  transition: transform 0.18s var(--ease), opacity 0.18s var(--ease);
+  will-change: transform, opacity;
 }
 .gallery-thumb {
   position: relative;
