@@ -828,4 +828,3 @@ document.addEventListener('DOMContentLoaded', function() {
   }
 
 });
-
